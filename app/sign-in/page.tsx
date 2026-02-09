@@ -7,62 +7,40 @@ import { useRouter } from 'next/navigation';
 export default function SignIn() {
 
     const router = useRouter();
-    const [formData, setFormData] = useState({
-        email: '',
-        password: ''
-
-    });
-    const [error, setError] = useState('');
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
 
-    // Handle input change
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setFormData({
-            ...formData,
-            [e.target.id]: e.target.value
-        });
-        setError(''); // Clear error saat user mengetik
-    };
-
-    // Handle form submit
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
+        setError("");
         setLoading(true);
-        setError('');
 
         try {
-            const response = await fetch('/api/auth', {
-                method: 'POST',
+            const res = await fetch("/api/login", {
+                method: "POST",
                 headers: {
-                    'Content-Type': 'application/json',
+                    "Content-Type": "application/json",
                 },
-                body: JSON.stringify(formData)
+                body: JSON.stringify({
+                    email,
+                    password,
+                }),
             });
 
-            const data = await response.json();
+            const data = await res.json();
 
-            if (data.success) {
-                // Login berhasil
-                console.log('Login berhasil:', data.data);
-
-                // Simpan data user ke localStorage (untuk session sementara)
-                localStorage.setItem('user', JSON.stringify(data.data));
-
-                // Redirect ke dashboard berdasarkan role
-                if (data.data.role === 'admin') {
-                    router.push('/dashboard/admin');
-                } else if (data.data.role === 'hr') {
-                    router.push('/dashboard/hr');
-                } else {
-                    router.push('/dashboard/employee');
-                }
-            } else {
-                // Login gagal
-                setError(data.message || 'Login failed');
+            if (!res.ok) {
+                throw new Error(data.message || "Login gagal");
             }
-        } catch (err) {
-            console.error('Error:', err);
-            setError('Network error. Please try again.');
+
+            localStorage.setItem("access_token", data.token);
+            localStorage.setItem("user", JSON.stringify(data.user));
+
+            router.push("/dashboard");
+        } catch (err: any) {
+            setError(err.message);
         } finally {
             setLoading(false);
         }
@@ -82,7 +60,7 @@ export default function SignIn() {
                     {/* Header */}
                     <div className="text-center mb-8">
                         <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent mb-2">
-                            Welcome
+                            Salary
                         </h1>
                         <p className="text-purple-300 text-sm">Sign in to your account</p>
                     </div>
@@ -95,7 +73,7 @@ export default function SignIn() {
                     )}
 
                     {/* Form */}
-                    <form onSubmit={handleSubmit} className="space-y-5">
+                    <form onSubmit={handleLogin} className="space-y-5">
                         {/* Email Input */}
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium text-purple-300 mb-2">
@@ -104,12 +82,13 @@ export default function SignIn() {
                             <input
                                 type="email"
                                 id="email"
-                                value={formData.email}
-                                onChange={handleChange}
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                                 placeholder="your@email.com"
                                 required
                                 className="w-full px-4 py-3 bg-slate-800 border border-purple-500 border-opacity-30 rounded-lg text-white placeholder-purple-300 placeholder-opacity-50 focus:outline-none focus:border-purple-500 focus:border-opacity-100 focus:ring-2 focus:ring-purple-500 focus:ring-opacity-30 transition duration-300"
                             />
+                            
                         </div>
 
                         {/* Password Input */}
@@ -120,12 +99,14 @@ export default function SignIn() {
                             <input
                                 type="password"
                                 id="password"
-                                value={formData.password}
-                                onChange={handleChange}
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                                 placeholder="••••••••"
                                 required
                                 className="w-full px-4 py-3 bg-slate-800 border border-purple-500 border-opacity-30 rounded-lg text-white placeholder-purple-300 placeholder-opacity-50 focus:outline-none focus:border-purple-500 focus:border-opacity-100 focus:ring-2 focus:ring-purple-500 focus:ring-opacity-30 transition duration-300"
                             />
+
+                            {error && <p className="text-sm text-red-500">{error}</p>}
                         </div>
 
                         {/* Remember Me & Forgot Password */}
@@ -146,9 +127,8 @@ export default function SignIn() {
                         <button
                             type="submit"
                             disabled={loading}
-                            className={`w-full mt-6 py-3 px-4 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 text-white font-semibold rounded-lg transition duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 ${
-                                loading ? 'opacity-70 cursor-not-allowed' : ''
-                            }`}
+                            className={`w-full mt-6 py-3 px-4 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 text-white font-semibold rounded-lg transition duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 ${loading ? 'opacity-70 cursor-not-allowed' : ''
+                                }`}
                         >
                             {loading ? 'Signing in...' : 'Sign In'}
                         </button>
