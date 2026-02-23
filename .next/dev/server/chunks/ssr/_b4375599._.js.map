@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///D:/SEMESTER%204/Front%20End%20Programming/salary/components/Sidebar.tsx"],"sourcesContent":["export default function Sidebar() {\r\n  return (\r\n    <h1 className=\"text-2xl font-bold text-purple-400\">Sidebar</h1>\r\n  \r\n  );\r\n\r\n}"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,8OAAC;QAAG,WAAU;kBAAqC;;;;;;AAIvD"}},
-    {"offset": {"line": 24, "column": 0}, "map": {"version":3,"sources":["file:///D:/SEMESTER%204/Front%20End%20Programming/salary/app/%28dashboard%29/layout.tsx"],"sourcesContent":["import Sidebar from \"@/components/Sidebar\"\r\n\r\n// app/(dashboard)/dashboard/layout.tsx\r\nexport default function DashboardLayout({\r\n    children,\r\n}: {\r\n    children: React.ReactNode\r\n}) {\r\n    return (\r\n        <div className=\"min-h-screen bg-gradient-to-br from-slate-950 via-purple-900 to-slate-900 flex items-center justify-center p-6\">\r\n            <div className=\"bg-slate-900 bg-opacity-50 backdrop-blur-lg rounded-2xl border border-purple-500 border-opacity-30 shadow-2xl p-8 max-w-lg w-full text-center\">\r\n\r\n                <Sidebar />\r\n                {/* Header, dll */}\r\n                {children}\r\n            </div>\r\n        </div>\r\n            )\r\n}"],"names":[],"mappings":";;;;;AAAA;;;AAGe,SAAS,gBAAgB,EACpC,QAAQ,EAGX;IACG,qBACI,8OAAC;QAAI,WAAU;kBACX,cAAA,8OAAC;YAAI,WAAU;;8BAEX,8OAAC,iIAAO;;;;;gBAEP;;;;;;;;;;;;AAIjB"}}]
-}
