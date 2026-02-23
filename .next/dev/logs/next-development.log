@@ -1,0 +1,4750 @@
+[00:01:06.568] Server  LOG     ✓ Ready in 49.6s
+[00:01:09.681] Server  LOG     ○ Compiling / ...
+[00:01:35.370] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:16.026] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:46.695] Server  LOG     ○ Compiling /dashboard ...
+[00:14:50.313] Server  ERROR   ⨯ Error: The default export is not a React Component in "/dashboard/layout"
+[00:14:51.023] Server  ERROR   ⨯ Error: The default export is not a React Component in "/dashboard/layout"
+[00:14:53.297] Server  ERROR   ⨯ Error: The default export is not a React Component in "/dashboard/layout"
+[00:14:53.990] Server  ERROR   ⨯ Error: The default export is not a React Component in "/dashboard/layout"
+[00:14:54.067] Server  LOG     ○ Compiling /_error ...
+[00:14:58.098] Browser ERROR   uncaughtError: Error: The default export is not a React Component in "/dashboard/layout"
+[00:18:35.051] Server  LOG     ✓ Compiled in 702ms
+[00:18:36.772] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:37.422] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="dashboard/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+            <RedirectBoundary>
+              <RedirectErrorBoundary router={{...}}>
+                <InnerLayoutRouter url="/dashboard" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                  <SegmentViewNode type="page" pagePath="(dashboard...">
+                    <SegmentTrieNode>
+                    <ClientPageRoot Component={function Dashboard} serverProvidedParams={{...}}>
+                      <Dashboard params={Promise} searchParams={Promise}>
+                        <div className="min-h-scre...">
+                          <div className="bg-slate-9...">
+                            <h1 className="text-3xl m...">
++                             sara
+-                             Pengguna
+                              ...
+                            ...
+                  ...
+                ...
+      ...
+
+[00:23:04.000] Server  LOG     ✓ Compiled in 282ms
+[00:23:04.222] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./app/(dashboard)/dashboard/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:23:05.943] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:07.791] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:27.424] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./app/(dashboard)/dashboard/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:23:27.426] Server  LOG     ✓ Compiled in 110ms
+[00:23:28.604] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:28.808] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="dashboard/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+            <RedirectBoundary>
+              <RedirectErrorBoundary router={{...}}>
+                <InnerLayoutRouter url="/dashboard" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                  <SegmentViewNode type="page" pagePath="(dashboard...">
+                    <SegmentTrieNode>
+                    <ClientPageRoot Component={function Dashboard} serverProvidedParams={{...}}>
+                      <Dashboard params={Promise} searchParams={Promise}>
+                        <div className="min-h-scre...">
+                          <div className="bg-slate-9...">
+                            <h1 className="text-3xl m...">
++                             sara
+-                             Pengguna
+                              ...
+                            ...
+                  ...
+                ...
+      ...
+
+[00:23:50.067] Server  LOG     ✓ Compiled in 157ms
+[00:23:51.084] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:67:6
+Parsing ecmascript source code failed
+  65 |     </div>
+  66 |
+> 67 |      {/* ✅ Wajib render children untuk layout */}
+     |      ^
+  68 |       {children}
+  69 |   );
+  70 | }
+
+Expected ',', got '{'
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:23:51.484] Server  LOG     ✓ Compiled in 87ms
+[00:23:53.315] Server  LOG     ✓ Compiled in 151ms
+[00:23:54.047] Browser ERROR   uncaughtError: ReferenceError: children is not defined
+[00:24:42.350] Server  LOG     ✓ Compiled in 177ms
+[00:24:42.380] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:24:42.684] Server  ERROR   ⨯ ./app/(dashboard)/dashboard/page.tsx:24:1
+Parsing ecmascript source code failed
+  22 | export default function Dashboard() {
+  23 |     children,
+> 24 | }: {
+     | ^
+  25 |   children: React.ReactNode;
+  26 | }) {
+  27 |   const router = useRouter();
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+
+[00:24:42.701] Server  LOG     ✓ Compiled in 139ms
+[00:24:45.315] Browser ERROR   uncaughtError: ReferenceError: children is not defined
+[00:24:45.316] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:24:1
+Parsing ecmascript source code failed
+  22 | export default function Dashboard() {
+  23 |     children,
+> 24 | }: {
+     | ^
+  25 |   children: React.ReactNode;
+  26 | }) {
+  27 |   const router = useRouter();
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:24:46.125] Browser ERROR   uncaughtError: Error: ./app/(dashboard)/dashboard/page.tsx:24:1
+Parsing ecmascript source code failed
+  22 | export default function Dashboard() {
+  23 |     children,
+> 24 | }: {
+     | ^
+  25 |   children: React.ReactNode;
+  26 | }) {
+  27 |   const router = useRouter();
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+
+[00:24:46.327] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:24:1
+Parsing ecmascript source code failed
+  22 | export default function Dashboard() {
+  23 |     children,
+> 24 | }: {
+     | ^
+  25 |   children: React.ReactNode;
+  26 | }) {
+  27 |   const router = useRouter();
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:24:46.445] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:24:1
+Parsing ecmascript source code failed
+  22 | export default function Dashboard() {
+  23 |     children,
+> 24 | }: {
+     | ^
+  25 |   children: React.ReactNode;
+  26 | }) {
+  27 |   const router = useRouter();
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:24:48.302] Server  LOG     ✓ Compiled in 83ms
+[00:24:49.216] Server  ERROR   ⨯ ReferenceError: children is not defined
+[00:24:50.180] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:24:50.523] Browser ERROR   uncaughtError: ReferenceError: children is not defined
+[00:25:46.874] Server  LOG     ✓ Compiled in 179ms
+[00:25:47.059] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:22:37
+Parsing ecmascript source code failed
+  20 | }
+  21 |
+> 22 | export default function Dashboard() ){
+     |                                     ^
+  23 |   
+  24 |   const router = useRouter();
+  25 |   const userName = getUserNameFromStorage();
+
+Expected '{', got ')'
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:25:47.245] Server  LOG     ✓ Compiled in 78ms
+[00:25:47.302] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:25:47.534] Server  ERROR   ⨯ ReferenceError: children is not defined
+[00:25:48.967] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:49.292] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:22:37
+Parsing ecmascript source code failed
+  20 | }
+  21 |
+> 22 | export default function Dashboard() ({
+     |                                     ^
+  23 |   
+  24 |   const router = useRouter();
+  25 |   const userName = getUserNameFromStorage();
+
+Expected '{', got '('
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:25:49.539] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:22:37
+Parsing ecmascript source code failed
+  20 | }
+  21 |
+> 22 | export default function Dashboard() ({
+     |                                     ^
+  23 |   
+  24 |   const router = useRouter();
+  25 |   const userName = getUserNameFromStorage();
+
+Expected '{', got '('
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:25:49.539] Browser ERROR   uncaughtError: ReferenceError: children is not defined
+[00:25:49.784] Server  LOG     ✓ Compiled in 105ms
+[00:25:49.911] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:25:51.023] Server  LOG     ✓ Compiled in 220ms
+[00:25:51.847] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:52.314] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:22:37
+Parsing ecmascript source code failed
+  20 | }
+  21 |
+> 22 | export default function Dashboard() (
+     |                                     ^
+  23 |   {
+  24 |   
+  25 |   const router = useRouter();
+
+Expected '{', got '('
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:25:52.314] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:22:37
+Parsing ecmascript source code failed
+  20 | }
+  21 |
+> 22 | export default function Dashboard() (
+     |                                     ^
+  23 |   {
+  24 |   
+  25 |   const router = useRouter();
+
+Expected '{', got '('
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:25:52.314] Browser ERROR   uncaughtError: Error: Could not parse module '[project]/app/(dashboard)/dashboard/page.tsx'
+
+Expected '{', got '('
+[00:25:54.046] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:22:37
+Parsing ecmascript source code failed
+  20 | }
+  21 |
+> 22 | export default function Dashboard() ({
+     |                                     ^
+  23 |   
+  24 |   const router = useRouter();
+  25 |   const userName = getUserNameFromStorage();
+
+Expected '{', got '('
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:25:55.054] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:22:37
+Parsing ecmascript source code failed
+  20 | }
+  21 |
+> 22 | export default function Dashboard() ({
+     |                                     ^
+  23 |   
+  24 |   
+  25 |   const router = useRouter();
+
+Expected '{', got '('
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:25:56.128] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:22:37
+Parsing ecmascript source code failed
+  20 | }
+  21 |
+> 22 | export default function Dashboard() ({
+     |                                     ^
+  23 |     children,
+  24 | }: {
+  25 |   children: React.ReactNode;
+
+Expected '{', got '('
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:26:00.095] Server  LOG     ✓ Compiled in 104ms
+[00:26:00.096] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:22:37
+Parsing ecmascript source code failed
+  20 | }
+  21 |
+> 22 | export default function Dashboard() ({
+     |                                     ^
+  23 |   
+  24 |   const router = useRouter();
+  25 |   const userName = getUserNameFromStorage();
+
+Expected '{', got '('
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:26:00.106] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:26:00.107] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./app/(dashboard)/dashboard/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:26:00.113] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:26:00.931] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:26:01.132] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="dashboard/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+            <RedirectBoundary>
+              <RedirectErrorBoundary router={{...}}>
+                <InnerLayoutRouter url="/dashboard" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                  <SegmentViewNode type="page" pagePath="(dashboard...">
+                    <SegmentTrieNode>
+                    <ClientPageRoot Component={function Dashboard} serverProvidedParams={{...}}>
+                      <Dashboard params={Promise} searchParams={Promise}>
+                        <div className="min-h-scre...">
+                          <div className="bg-slate-9...">
+                            <h1 className="text-3xl m...">
++                             sara
+-                             Pengguna
+                              ...
+                            ...
+                  ...
+                ...
+      ...
+
+[00:26:19.295] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:26:19.462] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="dashboard/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+            <RedirectBoundary>
+              <RedirectErrorBoundary router={{...}}>
+                <InnerLayoutRouter url="/dashboard" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                  <SegmentViewNode type="page" pagePath="(dashboard...">
+                    <SegmentTrieNode>
+                    <ClientPageRoot Component={function Dashboard} serverProvidedParams={{...}}>
+                      <Dashboard params={Promise} searchParams={Promise}>
+                        <div className="min-h-scre...">
+                          <div className="bg-slate-9...">
+                            <h1 className="text-3xl m...">
++                             sara
+-                             Pengguna
+                              ...
+                            ...
+                  ...
+                ...
+      ...
+
+[00:27:05.558] Server  LOG     ✓ Compiled in 410ms
+[00:27:53.056] Server  LOG     ✓ Compiled in 305ms
+[00:27:57.603] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:57.785] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="dashboard/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+            <RedirectBoundary>
+              <RedirectErrorBoundary router={{...}}>
+                <InnerLayoutRouter url="/dashboard" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                  <SegmentViewNode type="page" pagePath="(dashboard...">
+                    <SegmentTrieNode>
+                    <ClientPageRoot Component={function Dashboard} serverProvidedParams={{...}}>
+                      <Dashboard params={Promise} searchParams={Promise}>
+                        <div className="min-h-scre...">
+                          <div className="bg-slate-9...">
+                            <h1 className="text-3xl m...">
++                             sara
+-                             Pengguna
+                              ...
+                            ...
+                  ...
+                ...
+      ...
+
+[00:28:22.049] Browser ERROR   ./app/(dashboard)/layout.tsx:7:1
+Ecmascript file had an error
+   5 |
+   6 | // layout.tsx → Wrapper untuk banyak halaman, WAJIB ada children
+>  7 | export default function DashboardLayout({ 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   children 
+     | ^^^^^^^^^^^
+>  9 | }: { 
+     | ^^^^^^^^^^^
+> 10 |   children: React.ReactNode 
+     | ^^^^^^^^^^^
+> 11 | }) {
+     | ^^^^^^^^^^^
+> 12 |   return (
+     | ^^^^^^^^^^^
+> 13 |     <div>
+     | ^^^^^^^^^^^
+> 14 |       <Sidebar />
+     | ^^^^^^^^^^^
+> 15 |       <main>{children}</main>  {/* ← children dirender di sini */}
+     | ^^^^^^^^^^^
+> 16 |     </div>
+     | ^^^^^^^^^^^
+> 17 |   );
+     | ^^^^^^^^^^^
+> 18 | }
+     | ^^
+
+the name `default` is exported multiple times
+[00:28:33.049] Browser ERROR   ./app/(dashboard)/layout.tsx:8:1
+Ecmascript file had an error
+   6 |
+   7 | // layout.tsx → Wrapper untuk banyak halaman, WAJIB ada children
+>  8 | export default function DashboardLayout({ 
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   children 
+     | ^^^^^^^^^^^
+> 10 | }: { 
+     | ^^^^^^^^^^^
+> 11 |   children: React.ReactNode 
+     | ^^^^^^^^^^^
+> 12 | }) {
+     | ^^^^^^^^^^^
+> 13 |   return (
+     | ^^^^^^^^^^^
+> 14 |     <div>
+     | ^^^^^^^^^^^
+> 15 |       <Sidebar />
+     | ^^^^^^^^^^^
+> 16 |       <main>{children}</main>  {/* ← children dirender di sini */}
+     | ^^^^^^^^^^^
+> 17 |     </div>
+     | ^^^^^^^^^^^
+> 18 |   );
+     | ^^^^^^^^^^^
+> 19 | }
+     | ^^
+
+the name `default` is exported multiple times
+[00:28:47.282] Server  LOG     ✓ Compiled in 118ms
+[00:30:51.495] Server  LOG     ✓ Compiled in 140ms
+[00:30:52.831] Server  LOG     ✓ Compiled in 117ms
+[00:30:54.447] Server  ERROR   ⨯ ReferenceError: im is not defined
+[00:30:55.092] Server  ERROR   ⨯ ReferenceError: im is not defined
+[00:30:55.270] Browser ERROR   ./app/(dashboard)/layout.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | // app/(dashboard)/dashboard/layout.tsx
+> 4 | export default function DashboardLayout({
+    | ^^^^^^
+  5 |   children,
+  6 | }: {
+  7 |   children: React.ReactNode
+
+Expected 'from', got 'export'
+[00:30:55.379] Server  ERROR   ⨯ ./app/(dashboard)/layout.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | // app/(dashboard)/dashboard/layout.tsx
+> 4 | export default function DashboardLayout({
+    | ^^^^^^
+  5 |   children,
+  6 | }: {
+  7 |   children: React.ReactNode
+
+Expected 'from', got 'export'
+
+
+[00:30:55.870] Browser ERROR   uncaughtError: Error: ./app/(dashboard)/layout.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | // app/(dashboard)/dashboard/layout.tsx
+> 4 | export default function DashboardLayout({
+    | ^^^^^^
+  5 |   children,
+  6 | }: {
+  7 |   children: React.ReactNode
+
+Expected 'from', got 'export'
+
+
+[00:30:56.067] Browser ERROR   ./app/(dashboard)/layout.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | // app/(dashboard)/dashboard/layout.tsx
+> 4 | export default function DashboardLayout({
+    | ^^^^^^
+  5 |   children,
+  6 | }: {
+  7 |   children: React.ReactNode
+
+Expected 'from', got 'export'
+[00:30:56.067] Browser ERROR   ./app/(dashboard)/layout.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | // app/(dashboard)/dashboard/layout.tsx
+> 4 | export default function DashboardLayout({
+    | ^^^^^^
+  5 |   children,
+  6 | }: {
+  7 |   children: React.ReactNode
+
+Expected 'from', got 'export'
+[00:30:58.050] Browser ERROR   ./app/(dashboard)/layout.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | // app/(dashboard)/dashboard/layout.tsx
+> 4 | export default function DashboardLayout({
+    | ^^^^^^
+  5 |   children,
+  6 | }: {
+  7 |   children: React.ReactNode
+
+Expected ',', got 'export'
+[00:30:58.050] Browser ERROR   ./app/(dashboard)/layout.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | // app/(dashboard)/dashboard/layout.tsx
+> 4 | export default function DashboardLayout({
+    | ^^^^^^
+  5 |   children,
+  6 | }: {
+  7 |   children: React.ReactNode
+
+Expected ',', got 'export'
+[00:30:58.806] Server  LOG     ✓ Compiled in 93ms
+[00:30:59.756] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:59.975] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="dashboard/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+            <RedirectBoundary>
+              <RedirectErrorBoundary router={{...}}>
+                <InnerLayoutRouter url="/dashboard" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                  <SegmentViewNode type="page" pagePath="(dashboard...">
+                    <SegmentTrieNode>
+                    <ClientPageRoot Component={function Dashboard} serverProvidedParams={{...}}>
+                      <Dashboard params={Promise} searchParams={Promise}>
+                        <div className="min-h-scre...">
+                          <div className="bg-slate-9...">
+                            <h1 className="text-3xl m...">
++                             sara
+-                             Pengguna
+                              ...
+                            ...
+                  ...
+                ...
+      ...
+
+[00:31:04.454] Server  LOG     ✓ Compiled in 325ms
+[00:32:16.295] Server  LOG     ✓ Compiled in 271ms
+[00:32:17.051] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:59:9
+Parsing ecmascript source code failed
+  57 |           }}
+  58 |           className="px-6 py-2 bg-red-600 hover:bg-red-500 text-white font-medium rounded-lg transition duration-300"
+> 59 |         >
+     |         ^
+  60 |           Logout
+  61 |         </button>
+  62 |
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:32:17.410] Server  LOG     ✓ Compiled in 95ms
+[00:32:22.984] Server  LOG     ✓ Compiled in 118ms
+[00:32:29.794] Server  LOG     ✓ Compiled in 142ms
+[00:32:31.044] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:48:9
+Parsing ecmascript source code failed
+  46 |         </button>
+  47 |
+> 48 |         {/* ✅ Wajib render children untuk layout */}
+     |         ^
+  49 |         {children}
+  50 |
+  51 |       </div>
+
+Expected ',', got '{'
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:32:38.614] Server  LOG     ✓ Compiled in 74ms
+[00:32:42.202] Server  LOG     ✓ Compiled in 81ms
+[00:32:42.679] Server  LOG     ✓ Compiled in 74ms
+[00:32:43.245] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:22:37
+Parsing ecmascript source code failed
+  20 | }
+  21 |
+> 22 | export default function Dashboard() ({
+     |                                     ^
+  23 |   
+  24 |   const router = useRouter();
+  25 |   const userName = getUserNameFromStorage();
+
+Expected '{', got '('
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:32:50.246] Server  LOG     ✓ Compiled in 169ms
+[00:32:51.047] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:41:12
+Parsing ecmascript source code failed
+  39 |         </h1>
+  40 |
+> 41 |         <p className="text-purple-300 mb-6">
+     |            ^^^^^^^^^
+  42 |           Anda telah berhasil login. Silakan jelajahi fitur-fitur aplikasi Salary.
+  43 |         </p>
+  44 |
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:32:54.930] Server  LOG     ✓ Compiled in 92ms
+[00:33:03.367] Server  LOG     ✓ Compiled in 160ms
+[00:33:04.043] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:41:12
+Parsing ecmascript source code failed
+  39 |         </h1>
+  40 |
+> 41 |         <p className="text-purple-300 mb-6">
+     |            ^^^^^^^^^
+  42 |           Anda telah berhasil login. Silakan jelajahi fitur-fitur aplikasi Salary.
+  43 |         </p>
+  44 |
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:33:15.151] Server  LOG     ✓ Compiled in 81ms
+[00:33:15.993] Server  LOG     ✓ Compiled in 92ms
+[00:33:17.040] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:41:12
+Parsing ecmascript source code failed
+  39 |         </h1>
+  40 |
+> 41 |         <p className="text-purple-300 mb-6">
+     |            ^^^^^^^^^
+  42 |           Anda telah berhasil login. Silakan jelajahi fitur-fitur aplikasi Salary.
+  43 |         </p>
+  44 |
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:33:19.050] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:41:12
+Parsing ecmascript source code failed
+  39 |         </h1>
+  40 |
+> 41 |         <p className="text-purple-300 mb-6">
+     |            ^^^^^^^^^
+  42 |           Anda telah berhasil login. Silakan jelajahi fitur-fitur aplikasi Salary.
+  43 |         </p>
+  44 |
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:33:19.050] Browser ERROR   ./app/(dashboard)/layout.tsx:18:1
+Parsing ecmascript source code failed
+  16 |     </div>
+  17 |   )
+> 18 | }
+     | ^
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:20.049] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:41:12
+Parsing ecmascript source code failed
+  39 |         </h1>
+  40 |
+> 41 |         <p className="text-purple-300 mb-6">
+     |            ^^^^^^^^^
+  42 |           Anda telah berhasil login. Silakan jelajahi fitur-fitur aplikasi Salary.
+  43 |         </p>
+  44 |
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:33:20.049] Browser ERROR   ./app/(dashboard)/layout.tsx:18:1
+Parsing ecmascript source code failed
+  16 |             </div>
+  17 |             )
+> 18 | }
+     | ^
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:24.047] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:41:12
+Parsing ecmascript source code failed
+  39 |         </h1>
+  40 |
+> 41 |         <p className="text-purple-300 mb-6">
+     |            ^^^^^^^^^
+  42 |           Anda telah berhasil login. Silakan jelajahi fitur-fitur aplikasi Salary.
+  43 |         </p>
+  44 |
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:33:24.047] Browser ERROR   ./app/(dashboard)/layout.tsx:19:1
+Parsing ecmascript source code failed
+  17 |             
+  18 |             )
+> 19 | }
+     | ^
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:24.047] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:41:12
+Parsing ecmascript source code failed
+  39 |         </h1>
+  40 |
+> 41 |         <p className="text-purple-300 mb-6">
+     |            ^^^^^^^^^
+  42 |           Anda telah berhasil login. Silakan jelajahi fitur-fitur aplikasi Salary.
+  43 |         </p>
+  44 |
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:33:24.047] Browser ERROR   ./app/(dashboard)/layout.tsx:19:1
+Parsing ecmascript source code failed
+  17 |         
+  18 |             )
+> 19 | }
+     | ^
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:25.050] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:41:12
+Parsing ecmascript source code failed
+  39 |         </h1>
+  40 |
+> 41 |         <p className="text-purple-300 mb-6">
+     |            ^^^^^^^^^
+  42 |           Anda telah berhasil login. Silakan jelajahi fitur-fitur aplikasi Salary.
+  43 |         </p>
+  44 |
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:33:31.042] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:41:12
+Parsing ecmascript source code failed
+  39 |         </h1>
+  40 |
+> 41 |         <p className="text-purple-300 mb-6">
+     |            ^^^^^^^^^
+  42 |           Anda telah berhasil login. Silakan jelajahi fitur-fitur aplikasi Salary.
+  43 |         </p>
+  44 |
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:33:31.042] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:41:12
+Parsing ecmascript source code failed
+  39 |         </h1>
+  40 |
+> 41 |         <p className="text-purple-300 mb-6">
+     |            ^^^^^^^^^
+  42 |           Anda telah berhasil login. Silakan jelajahi fitur-fitur aplikasi Salary.
+  43 |         </p>
+  44 |
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:33:32.043] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:41:12
+Parsing ecmascript source code failed
+  39 |         </h1>
+  40 |
+> 41 |         <p className="text-purple-300 mb-6">
+     |            ^^^^^^^^^
+  42 |           Anda telah berhasil login. Silakan jelajahi fitur-fitur aplikasi Salary.
+  43 |         </p>
+  44 |
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:33:33.054] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:41:12
+Parsing ecmascript source code failed
+  39 |         </h1>
+  40 |
+> 41 |         <p className="text-purple-300 mb-6">
+     |            ^^^^^^^^^
+  42 |           Anda telah berhasil login. Silakan jelajahi fitur-fitur aplikasi Salary.
+  43 |         </p>
+  44 |
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:33:35.049] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:42:12
+Parsing ecmascript source code failed
+  40 |         </h1>
+  41 |
+> 42 |         <p className="text-purple-300 mb-6">
+     |            ^^^^^^^^^
+  43 |           Anda telah berhasil login. Silakan jelajahi fitur-fitur aplikasi Salary.
+  44 |         </p>
+  45 |
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:33:37.057] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:38:13
+Parsing ecmascript source code failed
+  36 |
+  37 |     d
+> 38 |         <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent mb-4">
+     |             ^^^^^^^^^
+  39 |           Selamat Datang di Dashboard {userName}! 🎉
+  40 |         </h1>
+  41 |
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:33:37.057] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:38:13
+Parsing ecmascript source code failed
+  36 |
+  37 |     di
+> 38 |         <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent mb-4">
+     |             ^^^^^^^^^
+  39 |           Selamat Datang di Dashboard {userName}! 🎉
+  40 |         </h1>
+  41 |
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:33:37.057] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:38:13
+Parsing ecmascript source code failed
+  36 |
+  37 |     div
+> 38 |         <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent mb-4">
+     |             ^^^^^^^^^
+  39 |           Selamat Datang di Dashboard {userName}! 🎉
+  40 |         </h1>
+  41 |
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:33:37.057] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:38:13
+Parsing ecmascript source code failed
+  36 |
+  37 |     <div></div>
+> 38 |         <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent mb-4">
+     |             ^^^^^^^^^
+  39 |           Selamat Datang di Dashboard {userName}! 🎉
+  40 |         </h1>
+  41 |
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:33:40.302] Server  LOG     ✓ Compiled in 212ms
+[00:33:41.049] Browser ERROR   ./app/(dashboard)/dashboard/page.tsx:67:1
+Parsing ecmascript source code failed
+  65 |
+  66 |   );
+> 67 | }
+     | ^
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component Browser]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(dashboard)/dashboard/page.tsx [Client Component SSR]
+    ./app/(dashboard)/dashboard/page.tsx [Server Component]
+[00:33:43.210] Server  LOG     ✓ Compiled in 130ms
+[00:33:44.233] Server  LOG     ✓ Compiled in 150ms
+[00:42:01.630] Server  LOG     ✓ Compiled in 574ms
+[00:43:20.385] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:43:20.673] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="dashboard/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/dashboard" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="(dashboard...">
+                      <SegmentTrieNode>
+                      <ClientPageRoot Component={function Dashboard} serverProvidedParams={{...}}>
+                        <Dashboard params={Promise} searchParams={Promise}>
+                          <div>
+                            <h1 className="text-3xl m...">
++                             sara
+-                             Pengguna
+                              ...
+                            ...
+                    ...
+                  ...
+        ...
+
+[00:43:43.774] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.784] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.807] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.844] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.859] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.872] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.879] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.886] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.892] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.898] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.908] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.914] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.921] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.928] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.935] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.941] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.947] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.952] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.958] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.962] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.968] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.974] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.980] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.985] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.991] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:43.996] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:44.002] Server  LOG     ✓ Compiled in 1266ms
+[00:43:45.041] Browser ERROR   ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:43:52.600] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:53.113] Browser ERROR   uncaughtError: Error: ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:53.369] Browser ERROR   ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:43:53.369] Browser ERROR   ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:44:28.051] Browser ERROR   ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:45:56.059] Browser ERROR   ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:45:58.054] Browser ERROR   ./components/Sidebar.tsx:6:1
+Module not found: Can't resolve 'lucide-react'
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:46:52.041] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export S doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export S was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Sun?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[00:46:52.041] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export S doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export S was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Sun?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[00:46:52.041] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[00:46:52.041] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[00:47:37.288] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Export S doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export S was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Sun?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+
+
+./components/Sidebar.tsx:6:1
+Export S doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export S was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Sun?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+
+
+./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+
+
+./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+
+[00:47:38.806] Browser ERROR   uncaughtError: Error: ./components/Sidebar.tsx:6:1
+Export S doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export S was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Sun?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+
+[00:47:39.393] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export S doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export S was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Sun?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[00:47:39.393] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export S doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export S was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Sun?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[00:47:39.394] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[00:47:39.394] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[00:47:40.055] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export S doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export S was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Sun?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[00:47:40.055] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export S doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export S was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Sun?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[00:47:40.055] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[00:47:40.055] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   S,
+     | ^^^^^^^^^^^^^^
+> 18 |   X
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[01:36:14.936] Server  ERROR   ⨯ ./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   X,
+     | ^^^^^^^^^^^^^^
+> 18 |   LayoutDashboard  // ✅ Ganti S dengan icon yang ada
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+
+
+./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   X,
+     | ^^^^^^^^^^^^^^
+> 18 |   LayoutDashboard  // ✅ Ganti S dengan icon yang ada
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+
+[01:36:15.493] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   X,
+     | ^^^^^^^^^^^^^^
+> 18 |   LayoutDashboard  // ✅ Ganti S dengan icon yang ada
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[01:36:15.493] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   X,
+     | ^^^^^^^^^^^^^^
+> 18 |   LayoutDashboard  // ✅ Ganti S dengan icon yang ada
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[01:36:15.493] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   X,
+     | ^^^^^^^^^^^^^^
+> 18 |   LayoutDashboard  // ✅ Ganti S dengan icon yang ada
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[01:36:15.493] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   X,
+     | ^^^^^^^^^^^^^^
+> 18 |   LayoutDashboard  // ✅ Ganti S dengan icon yang ada
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[01:36:15.493] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   X,
+     | ^^^^^^^^^^^^^^
+> 18 |   LayoutDashboard  // ✅ Ganti S dengan icon yang ada
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[01:36:15.493] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   X,
+     | ^^^^^^^^^^^^^^
+> 18 |   LayoutDashboard  // ✅ Ganti S dengan icon yang ada
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[01:36:18.203] Browser ERROR   uncaughtError: Error: ./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   X,
+     | ^^^^^^^^^^^^^^
+> 18 |   LayoutDashboard  // ✅ Ganti S dengan icon yang ada
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+
+
+[01:36:18.546] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   X,
+     | ^^^^^^^^^^^^^^
+> 18 |   LayoutDashboard  // ✅ Ganti S dengan icon yang ada
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[01:36:18.546] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   X,
+     | ^^^^^^^^^^^^^^
+> 18 |   LayoutDashboard  // ✅ Ganti S dengan icon yang ada
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[01:36:18.546] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   X,
+     | ^^^^^^^^^^^^^^
+> 18 |   LayoutDashboard  // ✅ Ganti S dengan icon yang ada
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[01:36:18.546] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   X,
+     | ^^^^^^^^^^^^^^
+> 18 |   LayoutDashboard  // ✅ Ganti S dengan icon yang ada
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[01:36:32.138] Server  LOG     ✓ Compiled in 917ms
+[01:36:35.906] Server  ERROR   ⨯ ReferenceError: UserShield is not defined
+[01:36:37.647] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:36:38.150] Browser ERROR   uncaughtError: ReferenceError: UserShield is not defined
+[01:36:43.332] Server  LOG     ✓ Compiled in 215ms
+[01:36:44.042] Browser ERROR   ./components/Sidebar.tsx:184:27
+Parsing ecmascript source code failed
+  182 |                       isActive(item.href) ? 'text-white' : 'text-purple-400 group-hover:text-purple-300'
+  183 |                     }`} />
+> 184 |                     <span className={`font-medium ${
+      |                           ^^^^^^^^^
+  185 |                       isActive(item.href) ? 'text-white' : 'text-purple-200 group-hover:text-white'
+  186 |                     }`}>
+  187 |                       {item.label}
+
+Expected '</', got 'ident'
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[01:36:47.614] Server  LOG     ✓ Compiled in 151ms
+[01:36:47.907] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:36:48.106] Server  ERROR   ⨯ ReferenceError: UserShield is not defined
+[01:36:48.816] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:36:50.059] Browser ERROR   uncaughtError: ReferenceError: UserShield is not defined
+[01:36:57.553] Server  LOG     ✓ Compiled in 3s
+[01:36:58.049] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   X,
+     | ^^^^^^^^^^^^^^
+> 18 |   LayoutDashboard  // ✅ Ganti S dengan icon yang ada
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[01:36:58.049] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   X,
+     | ^^^^^^^^^^^^^^
+> 18 |   LayoutDashboard  // ✅ Ganti S dengan icon yang ada
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[01:39:34.559] Server  LOG     ✓ Compiled in 734ms
+[01:39:36.642] Server  ERROR   ⨯ ReferenceError: UserShield is not defined
+[01:39:37.132] Server  ERROR   ⨯ ReferenceError: UserShield is not defined
+[01:39:37.206] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:39:38.185] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:39:38.185] Browser ERROR   uncaughtError: ReferenceError: UserShield is not defined
+[01:39:54.104] Server  LOG     ✓ Compiled in 3s
+[01:39:55.044] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   X,
+     | ^^^^^^^^^^^^^^
+> 18 |   LayoutDashboard  // ✅ Ganti S dengan icon yang ada
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[01:39:55.045] Browser ERROR   ./components/Sidebar.tsx:6:1
+Export UserShield doesn't exist in target module
+   4 | import Link from 'next/link';
+   5 | import { usePathname } from 'next/navigation';
+>  6 | import { 
+     | ^^^^^^^^^
+>  7 |   LayoutGrid, 
+     | ^^^^^^^^^^^^^^
+>  8 |   ChevronDown, 
+     | ^^^^^^^^^^^^^^
+>  9 |   Building2, 
+     | ^^^^^^^^^^^^^^
+> 10 |   Briefcase, 
+     | ^^^^^^^^^^^^^^
+> 11 |   Users, 
+     | ^^^^^^^^^^^^^^
+> 12 |   UserShield, 
+     | ^^^^^^^^^^^^^^
+> 13 |   Settings,
+     | ^^^^^^^^^^^^^^
+> 14 |   CalendarCheck,
+     | ^^^^^^^^^^^^^^
+> 15 |   CalendarDays,
+     | ^^^^^^^^^^^^^^
+> 16 |   Wallet,
+     | ^^^^^^^^^^^^^^
+> 17 |   X,
+     | ^^^^^^^^^^^^^^
+> 18 |   LayoutDashboard  // ✅ Ganti S dengan icon yang ada
+     | ^^^^^^^^^^^^^^
+> 19 | } from 'lucide-react';
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  20 |
+  21 | interface SidebarProps {
+  22 |   isOpen?: boolean;
+
+The export UserShield was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import User?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[01:41:57.395] Server  LOG     ✓ Compiled in 994ms
+[01:42:05.304] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:42:06.126] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:42:07.050] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="dashboard/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/dashboard" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="(dashboard...">
+                      <SegmentTrieNode>
+                      <ClientPageRoot Component={function Dashboard} serverProvidedParams={{...}}>
+                        <Dashboard params={Promise} searchParams={Promise}>
+                          <div>
+                            <h1 className="text-3xl m...">
++                             sara
+-                             Pengguna
+                              ...
+                            ...
+                    ...
+                  ...
+        ...
+
+[01:43:36.209] Server  LOG     ✓ Compiled in 720ms
+[01:43:48.163] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:43:51.000] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:43:51.198] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="dashboard/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/dashboard" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="(dashboard...">
+                      <SegmentTrieNode>
+                      <ClientPageRoot Component={function Dashboard} serverProvidedParams={{...}}>
+                        <Dashboard params={Promise} searchParams={Promise}>
+                          <div>
+                            <h1 className="text-3xl m...">
++                             sara
+-                             Pengguna
+                              ...
+                            ...
+                    ...
+                  ...
+        ...
+
+[01:56:20.630] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:56:20.961] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="dashboard/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/dashboard" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="(dashboard...">
+                      <SegmentTrieNode>
+                      <ClientPageRoot Component={function Dashboard} serverProvidedParams={{...}}>
+                        <Dashboard params={Promise} searchParams={Promise}>
+                          <div>
+                            <h1 className="text-3xl m...">
++                             sara
+-                             Pengguna
+                              ...
+                            ...
+                    ...
+                  ...
+        ...
+
+[01:56:27.444] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:56:28.513] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:56:28.734] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="dashboard/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/dashboard" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="(dashboard...">
+                      <SegmentTrieNode>
+                      <ClientPageRoot Component={function Dashboard} serverProvidedParams={{...}}>
+                        <Dashboard params={Promise} searchParams={Promise}>
+                          <div>
+                            <h1 className="text-3xl m...">
++                             sara
+-                             Pengguna
+                              ...
+                            ...
+                    ...
+                  ...
+        ...
+
+[01:57:11.048] Browser ERROR   ./app/(dashboard)/layout.tsx:17:10
+Parsing ecmascript source code failed
+  15 |                 {children}
+  16 |             </div>
+> 17 |         </div>
+     |          ^^^^^
+  18 |             )
+  19 | }
+
+Unterminated regexp literal
+[01:57:14.559] Server  ERROR   ⨯ ./app/(dashboard)/layout.tsx:17:10
+Parsing ecmascript source code failed
+  15 |                 {children}
+  16 |             </div>
+> 17 |         </div>
+     |          ^^^^^
+  18 |             )
+  19 | }
+
+Unterminated regexp literal
+
+
+[01:57:14.690] Browser ERROR   ./app/(dashboard)/layout.tsx:17:10
+Parsing ecmascript source code failed
+  15 |                 {children}
+  16 |             </div>
+> 17 |         </div>
+     |          ^^^^^
+  18 |             )
+  19 | }
+
+Unterminated regexp literal
+[01:57:15.099] Browser ERROR   uncaughtError: Error: ./app/(dashboard)/layout.tsx:17:10
+Parsing ecmascript source code failed
+  15 |                 {children}
+  16 |             </div>
+> 17 |         </div>
+     |          ^^^^^
+  18 |             )
+  19 | }
+
+Unterminated regexp literal
+
+
+[01:57:15.233] Browser ERROR   ./app/(dashboard)/layout.tsx:17:10
+Parsing ecmascript source code failed
+  15 |                 {children}
+  16 |             </div>
+> 17 |         </div>
+     |          ^^^^^
+  18 |             )
+  19 | }
+
+Unterminated regexp literal
+[01:57:15.346] Browser ERROR   ./app/(dashboard)/layout.tsx:17:10
+Parsing ecmascript source code failed
+  15 |                 {children}
+  16 |             </div>
+> 17 |         </div>
+     |          ^^^^^
+  18 |             )
+  19 | }
+
+Unterminated regexp literal
+[01:57:19.284] Server  LOG     ✓ Compiled in 134ms
+[01:57:20.507] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:57:21.056] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="dashboard/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/dashboard" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="(dashboard...">
+                      <SegmentTrieNode>
+                      <ClientPageRoot Component={function Dashboard} serverProvidedParams={{...}}>
+                        <Dashboard params={Promise} searchParams={Promise}>
+                          <div>
+                            <h1 className="text-3xl m...">
++                             sara
+-                             Pengguna
+                              ...
+                            ...
+                    ...
+                  ...
+        ...
+
+[01:57:28.042] Browser ERROR   ./app/(dashboard)/layout.tsx:17:10
+Parsing ecmascript source code failed
+  15 |                 {children}
+  16 |             </div>
+> 17 |         </div>
+     |          ^^^^^
+  18 |             )
+  19 | }
+
+Unterminated regexp literal
+[01:57:29.837] Server  LOG     ✓ Compiled in 203ms
+[01:58:13.333] Server  LOG     ✓ Compiled in 173ms
+[01:58:15.374] Server  LOG     ✓ Compiled in 137ms
+[02:01:11.170] Server  LOG     ✓ Compiled in 215ms
+[02:01:12.322] Server  LOG     ✓ Compiled in 119ms
+[02:01:16.567] Server  LOG     ✓ Compiled in 142ms
+[02:01:21.001] Server  LOG     ✓ Compiled in 128ms
+[02:01:54.370] Server  LOG     ✓ Compiled in 169ms
+[02:01:54.835] Server  LOG     ✓ Compiled in 192ms
+[02:01:55.042] Browser ERROR   ./components/Sidebar.tsx:218:9
+Parsing ecmascript source code failed
+  216 |               </li>
+  217 |               <button
+> 218 |         onClick={() => {
+      |         ^^^^^^^
+  219 |           localStorage.removeItem('access_token');
+  220 |           localStorage.removeItem('user');
+  221 |           router.push('/sign-in');
+
+Expected '</', got 'ident'
+
+Import trace:
+  Server Component:
+    ./components/Sidebar.tsx
+    ./app/(dashboard)/layout.tsx
+[02:01:56.724] Server  LOG     ✓ Compiled in 174ms
+[02:02:04.289] Server  LOG     ✓ Compiled in 153ms
+[02:02:04.620] Server  LOG     ✓ Compiled in 168ms
+[02:02:06.564] Server  LOG     ✓ Compiled in 176ms
+[02:02:11.201] Server  LOG     ✓ Finished filesystem cache database compaction in 11.9s
+[02:03:20.940] Server  LOG     ✓ Compiled in 170ms
+[02:03:21.659] Server  LOG     ✓ Compiled in 193ms
+[02:03:22.092] Browser ERROR   uncaughtError: ReferenceError: useRouter is not defined
+[02:03:50.200] Server  LOG     ✓ Compiled in 200ms
+[02:03:50.262] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[02:03:50.996] Server  LOG     ✓ Compiled in 409ms
+[02:03:51.034] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[02:03:52.340] Browser ERROR   uncaughtError: ReferenceError: useRouter is not defined
+[02:03:53.303] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:03:54.053] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="dashboard/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/dashboard" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="(dashboard...">
+                      <SegmentTrieNode>
+                      <ClientPageRoot Component={function Dashboard} serverProvidedParams={{...}}>
+                        <Dashboard params={Promise} searchParams={Promise}>
+                          <div>
+                            <h1 className="text-3xl m...">
++                             sara
+-                             Pengguna
+                              ...
+                    ...
+                  ...
+        ...
+
+[02:03:54.614] Server  LOG     ✓ Compiled in 130ms
+[02:05:19.043] Browser ERROR   ./app/(dashboard)/layout.tsx:15:17
+Parsing ecmascript source code failed
+  13 |                 <Sidebar />
+  14 |                 <
+> 15 |                 {/* Header, dll */}
+     |                 ^
+  16 |                 {children}
+  17 |            
+  18 |         </div>
+
+Expected '</', got '{'
+[02:05:23.054] Browser ERROR   ./app/(dashboard)/layout.tsx:15:35
+Parsing ecmascript source code failed
+  13 |                 <Sidebar />
+  14 |                 <Na
+> 15 |                 {/* Header, dll */}
+     |                                   ^
+  16 |                 {children}
+  17 |            
+  18 |         </div>
+
+Expected '</', got '}'
+[02:05:23.054] Browser ERROR   ./app/(dashboard)/layout.tsx:15:35
+Parsing ecmascript source code failed
+  13 |                 <Sidebar />
+  14 |                 <Nav
+> 15 |                 {/* Header, dll */}
+     |                                   ^
+  16 |                 {children}
+  17 |            
+  18 |         </div>
+
+Expected '</', got '}'
+[02:05:23.054] Browser ERROR   ./app/(dashboard)/layout.tsx:15:35
+Parsing ecmascript source code failed
+  13 |                 <Sidebar />
+  14 |                 <Navba
+> 15 |                 {/* Header, dll */}
+     |                                   ^
+  16 |                 {children}
+  17 |            
+  18 |         </div>
+
+Expected '</', got '}'
+[02:05:23.054] Browser ERROR   ./app/(dashboard)/layout.tsx:15:35
+Parsing ecmascript source code failed
+  13 |                 <Sidebar />
+  14 |                 <Navbar
+> 15 |                 {/* Header, dll */}
+     |                                   ^
+  16 |                 {children}
+  17 |            
+  18 |         </div>
+
+Expected '</', got '}'
+[02:05:24.059] Browser ERROR   ./app/(dashboard)/layout.tsx:16:35
+Parsing ecmascript source code failed
+  14 |                 <Sidebar />
+  15 |                 <Navbar
+> 16 |                 {/* Header, dll */}
+     |                                   ^
+  17 |                 {children}
+  18 |            
+  19 |         </div>
+
+Expected '</', got '}'
+[02:05:24.966] Server  LOG     ✓ Compiled in 1231ms
+[02:05:26.684] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:05:26.952] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="dashboard/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/dashboard" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="(dashboard...">
+                      <SegmentTrieNode>
+                      <ClientPageRoot Component={function Dashboard} serverProvidedParams={{...}}>
+                        <Dashboard params={Promise} searchParams={Promise}>
+                          <div>
+                            <h1 className="text-3xl m...">
++                             sara
+-                             Pengguna
+                              ...
+                    ...
+                  ...
+        ...
+
+[02:05:39.684] Server  LOG     ✓ Compiled in 185ms
+[02:05:42.920] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:05:45.487] Server  LOG     ✓ Compiled in 159ms
+[02:05:49.455] Server  LOG     ✓ Compiled in 152ms
+[02:05:52.441] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

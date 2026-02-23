@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///D:/SEMESTER%204/Front%20End%20Programming/salary/app/%28dashboard%29/layout.tsx"],"sourcesContent":["import Sidebar from \"@/components/Sidebar\"  \r\n\r\n// app/(dashboard)/dashboard/layout.tsx\r\nexport default function DashboardLayout({\r\n  children,\r\n}: {\r\n  children: React.ReactNode\r\n}) {\r\n  return (\r\n    <div>\r\n      {/* Sidebar, Header, dll */}\r\n      {children}\r\n    </div>\r\n  )\r\n}"],"names":[],"mappings":";;;;;;AAGe,SAAS,gBAAgB,EACtC,QAAQ,EAGT;IACC,qBACE,8OAAC;kBAEE;;;;;;AAGP"}}]
+}

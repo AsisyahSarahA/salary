@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///D:/SEMESTER%204/Front%20End%20Programming/salary/app/page.tsx"],"sourcesContent":["import React from \"react\";\nimport { redirect } from 'next/navigation';\n\nexport default function Home() {\n  redirect('/sign-in');\n  return (\n    <h1>asa</h1>\n  );\n}\n"],"names":[],"mappings":";;;;;AACA;AAAA;;;AAEe,SAAS;IACtB,IAAA,iMAAQ,EAAC;IACT,qBACE,8OAAC;kBAAG;;;;;;AAER"}}]
+}
