@@ -24,7 +24,7 @@ export default function Dashboard() {
   const userName = getUserNameFromStorage();
 
   useEffect(() => {
-    // Cek auth: redirect jika tidak ada token
+    // Cek auth: redirect jika tidak ada tokengit
     const token = localStorage.getItem('access_token');
     if (!token) {
       router.push('/sign-in');
