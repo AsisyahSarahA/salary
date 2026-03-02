@@ -1,21 +1,26 @@
-import Navbar from "@/components/Navbar"
-import Sidebar from "@/components/Sidebar"
+import Navbar from "@/components/Navbar";
+import Sidebar from "@/components/Sidebar";
 
-// app/(dashboard)/dashboard/layout.tsx
 export default function DashboardLayout({
-    children,
+  children,
 }: {
-    children: React.ReactNode
+  children: React.ReactNode;
 }) {
-    return (
-        <div className="min-h-screen flex bg-slate-900 text-white">
-           
+  return (
+    <div className="flex min-h-screen bg-slate-900">
+      {/* Sidebar kiri */}
+      <Sidebar />   
 
-                <Sidebar />
-                <Navbar />
-                {/* Header, dll */}
-                {children}
-           
-        </div>
-            )
+      {/* Area kanan */}
+      <div className="flex-1 flex flex-col">
+        {/* Navbar atas */}
+        <Navbar />
+
+        {/* Konten halaman */}
+        <main className="flex-1 p-6">
+          {children}
+        </main>
+      </div>
+    </div>
+  );
 }

@@ -35,11 +35,11 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
   return (
 
     <div>
-      {/* <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent mb-4">
-        Selamat Datang di Dashboard {userName}! 🎉
-      </h1> */}
-      {/* layout */}
-      {children}
+      <h1 className="text-3xl font-bold mb-4">Selamat datang, {userName}!</h1>
+       
+       <p className="text-lg text-gray-300 mb-6">
+        Ini adalah dashboard utama Anda. Gunakan menu di sebelah kiri untuk mengelola data perusahaan Anda, termasuk divisi, jabatan, karyawan, dan konfigurasi lainnya.
+      </p>
 
     </div>
   );

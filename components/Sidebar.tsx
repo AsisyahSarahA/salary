@@ -61,11 +61,11 @@ export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
             icon: Building2,
             hasSubmenu: true,
             submenu: [
-                { id: 'divisi', label: 'Divisi', icon: Building2, href: '/master/divisi' },
-                { id: 'jabatan', label: 'Jabatan', icon: Briefcase, href: '/master/jabatan' },
-                { id: 'karyawan', label: 'Karyawan', icon: Users, href: '/master/karyawan' },
-                { id: 'user', label: 'User', icon: UserCog, href: '/master/user' },
-                { id: 'konfigurasi', label: 'Konfigurasi', icon: Settings, href: '/master/konfigurasi' },
+                { id: 'divisi', label: 'Divisi', icon: Building2, href: '/divisi' },
+                { id: 'jabatan', label: 'Jabatan', icon: Briefcase, href: '/jabatan' },
+                { id: 'karyawan', label: 'Karyawan', icon: Users, href: '/karyawan' },
+                { id: 'user', label: 'User', icon: UserCog, href: '/user' },
+                { id: 'konfigurasi', label: 'Konfigurasi', icon: Settings, href: '/konfigurasi' },
             ]
         },
         {
@@ -210,7 +210,7 @@ export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
 
                         ))}
                     </ul>
-                    <button
+                    {/* <button
                         onClick={() => {
                             localStorage.removeItem('access_token');
                             localStorage.removeItem('user');
@@ -219,7 +219,7 @@ export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
                         className="px-6 py-2 bg-red-600 hover:bg-red-500 text-white font-medium rounded-lg transition duration-300"
                     >
                         Logout
-                    </button>
+                    </button> */}
                 </nav>
 
                 {/* Footer */}
