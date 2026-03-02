@@ -21,7 +21,7 @@ export default function Navbar({ onMenuClick, userName = 'Admin' }: NavbarProps)
   const [showNotification, setShowNotification] = useState(false);
 
   return (
-    <nav className="h-16 bg-slate-900 border-b border-purple-900/50 flex items-center justify-between px-6 shadow-lg">
+    <nav className="h-16 bg-slate-900 border-b border-purple-900/50 flex items-center justify-between px-10 shadow-lg">
       {/* Left Section - Mobile Menu & Search */}
       <div className="flex items-center gap-4 flex-1">
         {/* Mobile Menu Button */}
