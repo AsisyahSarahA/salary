@@ -82,9 +82,9 @@ export default function KonfigurasiTahunPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 justify-start items-start">
                 {/* FORM */}
-                <div className="bg-white rounded-2xl border border-purple-100 shadow-sm p-6">
+                <div className="bg-slate-900 rounded-2xl border border-purple-800 shadow-sm p-6">
                     <h2 className="text-lg font-semibold text-purple-700 flex items-center gap-2 mb-4">
-                        <span className="bg-purple-100 text-purple-700 p-2 rounded-lg">+</span>
+                        <span className="bg-purple-300 text-purple-700 p-2 rounded-lg">+</span>
                         Tambah Konfigurasi
                     </h2>
 
@@ -100,7 +100,7 @@ export default function KonfigurasiTahunPage() {
 
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <div>
-                            <label className="block text-sm font-medium text-purple-700 mb-1">
+                            <label className="block text-sm font-medium text-purple-700 mb-1 ">
                                 Tahun
                             </label>
                             <input
@@ -109,7 +109,7 @@ export default function KonfigurasiTahunPage() {
                                 value={form.tahun}
                                 onChange={handleChange}
                                
-                                className="w-full rounded-lg border border-purple-200 px-3 py-2 focus:ring-2 focus:ring-purple-400 outline-none bg-gray-50"
+                                className="w-full rounded-lg border border-purple-200 px-3 py-2 focus:ring-2 focus:ring-purple-400 outline-none bg-slate-900"
                                 required
                             />
                         </div>
@@ -162,7 +162,7 @@ export default function KonfigurasiTahunPage() {
                                 name="status"
                                 value={form.status}
                                 onChange={handleChange}
-                                className="w-full rounded-lg border border-purple-200 px-3 py-2 focus:ring-2 focus:ring-purple-400 outline-none"
+                                className="w-full rounded-lg border border-purple-200 px-3 py-2 focus:ring-2 focus:ring-purple-400 outline-none bg-slate-900"
                             >
                                 <option value="AKTIF">Aktif</option>
                                 <option value="NONAKTIF">Nonaktif</option>
@@ -179,7 +179,7 @@ export default function KonfigurasiTahunPage() {
                 </div>
 
                 {/* TABLE */}
-                <div className="lg:col-span-2 bg-white rounded-2xl border border-purple-100 shadow-sm p-6 ">
+                <div className="lg:col-span-2 bg-slate-900 rounded-2xl border border-purple-800 shadow-sm p-6 ">
                     <div className="flex justify-between items-center mb-4">
                         <h2 className="text-lg font-semibold text-purple-700">
                             Data Konfigurasi
@@ -205,7 +205,7 @@ export default function KonfigurasiTahunPage() {
                                 {data.map((item, index) => (
                                     <tr
                                         key={item.id}
-                                        className="border-b border-purple-50 hover:bg-purple-50 transition"
+                                        className="border-b border-purple-50 hover:bg-purple-400 transition"
                                     >
                                         <td className="py-3 text-purple-600">{index + 1}</td>
                                         <td className="py-3 font-semibold text-purple-700">

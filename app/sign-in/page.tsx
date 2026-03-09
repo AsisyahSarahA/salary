@@ -38,8 +38,10 @@ export default function SignIn() {
 
             localStorage.setItem("access_token", data.token);
             localStorage.setItem("user", JSON.stringify(data.user));
+            
 
             router.push("/dashboard");
+            router.refresh();
         } catch (err: any) {
             setError(err.message);
         } finally {
@@ -107,7 +109,7 @@ export default function SignIn() {
                                 className="w-full px-4 py-3 bg-slate-800 border border-purple-500 border-opacity-30 rounded-lg text-white placeholder-purple-300 placeholder-opacity-50 focus:outline-none focus:border-purple-500 focus:border-opacity-100 focus:ring-2 focus:ring-purple-500 focus:ring-opacity-30 transition duration-300"
                             />
 
-                            
+
                         </div>
 
                         {/* Remember Me & Forgot Password */}

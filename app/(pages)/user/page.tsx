@@ -62,7 +62,7 @@ export default function UserPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
         {/* FORM */}
-        <div className="bg-white rounded-2xl border shadow-sm p-6">
+        <div className="bg-slate-900 rounded-2xl border shadow-sm p-6">
           <h2 className="text-lg font-semibold flex items-center gap-2 mb-6">
             <span className="w-8 h-8 flex items-center justify-center rounded-lg bg-indigo-100 text-indigo-600 text-xl">
               +
@@ -115,7 +115,7 @@ export default function UserPage() {
                 name="role"
                 value={form.role}
                 onChange={handleChange}
-                className="w-full rounded-lg border px-3 py-2 focus:ring-2 focus:ring-indigo-400 outline-none"
+                className="w-full rounded-lg border px-3 py-2 focus:ring-2 focus:ring-indigo-400 outline-none bg-slate-900"
               >
                 <option value="USER">User / Karyawan</option>
                 <option value="ADMIN">Admin</option>
@@ -132,10 +132,10 @@ export default function UserPage() {
         </div>
 
         {/* TABLE */}
-        <div className="lg:col-span-2 bg-white rounded-2xl border shadow-sm p-6 overflow-x-auto">
+        <div className="lg:col-span-2 bg-slate-900 rounded-2xl border shadow-sm p-6 overflow-x-auto">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg font-semibold">Data User</h2>
-            <span className="text-xs bg-teal-100 text-teal-700 px-3 py-1 rounded-full">
+            <span className="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full">
               {users.length} Items Total
             </span>
           </div>

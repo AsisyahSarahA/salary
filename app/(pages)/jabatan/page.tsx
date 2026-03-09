@@ -56,9 +56,9 @@ export default function JabatanPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* FORM */}
-        <div className="bg-white rounded-2xl shadow-sm border border-purple-100 p-6">
+        <div className="bg-slate-900 rounded-2xl shadow-sm border border-purple-800 p-6">
           <h2 className="text-lg font-semibold text-purple-700 flex items-center gap-2 mb-4">
-            <span className="bg-purple-100 text-purple-700 p-2 rounded-lg">+</span>
+            <span className="bg-purple-300 text-purple-700 p-2 rounded-lg">+</span>
             Tambah Jabatan
           </h2>
 
@@ -73,7 +73,7 @@ export default function JabatanPage() {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="Contoh: Manager IT"
-                className="w-full rounded-lg border border-purple-200 px-3 py-2 focus:ring-2 focus:ring-purple-400 outline-none"
+                className="w-full rounded-lg border border-purple-400 px-3 py-2 focus:ring-2 focus:ring-purple-400 outline-none"
                 required
               />
             </div>
@@ -86,7 +86,7 @@ export default function JabatanPage() {
                 name="divisi"
                 value={form.divisi}
                 onChange={handleChange}
-                className="w-full rounded-lg border border-purple-200 px-3 py-2 focus:ring-2 focus:ring-purple-400 outline-none"
+                className="w-full rounded-lg border border-purple-400 px-3 py-2 focus:ring-2 focus:ring-purple-400 outline-none bg-slate-900"
                 required
               >
                 <option value="">Pilih Divisi</option>
@@ -106,7 +106,7 @@ export default function JabatanPage() {
                 value={form.salary}
                 onChange={handleChange}
                 placeholder="3000000"
-                className="w-full rounded-lg border border-purple-200 px-3 py-2 focus:ring-2 focus:ring-purple-400 outline-none"
+                className="w-full rounded-lg border border-purple-400 px-3 py-2 focus:ring-2 focus:ring-purple-400 outline-none"
                 required
               />
             </div>
@@ -121,12 +121,12 @@ export default function JabatanPage() {
         </div>
 
         {/* TABLE */}
-        <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-purple-100 p-6 overflow-x-auto">
+        <div className="lg:col-span-2 bg-slate-900 rounded-2xl shadow-sm border border-purple-800 p-6 overflow-x-auto">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg font-semibold text-purple-700">
               Data Jabatan
             </h2>
-            <span className="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full">
+            <span className="text-xs bg-purple-300 text-purple-700 px-3 py-1 rounded-full">
               {jabatanList.length} Items Total
             </span>
           </div>
@@ -145,14 +145,14 @@ export default function JabatanPage() {
               {jabatanList.map((item, index) => (
                 <tr
                   key={item.id}
-                  className="border-b hover:bg-purple-50 transition"
+                  className="border-b hover:bg-purple-400 transition"
                 >
                   <td className="py-3">{index + 1}</td>
                   <td className="py-3 font-medium text-purple-700">
                     {item.name}
                   </td>
                   <td className="py-3">
-                    <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs">
+                    <span className="bg-purple-300 text-purple-700 px-3 py-1 rounded-full text-xs">
                       {item.divisi}
                     </span>
                   </td>

@@ -41,9 +41,9 @@ export default function DivisiPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* FORM */}
-        <div className="bg-white rounded-2xl border border-purple-100 shadow-sm p-6">
+        <div className="bg-slate-900 rounded-2xl border border-purple-800 shadow-sm p-6">
           <h2 className="text-lg font-semibold text-purple-700 flex items-center gap-2 mb-4">
-            <span className="bg-purple-100 text-purple-700 p-2 rounded-lg">+</span>
+            <span className="bg-purple-300 text-purple-700 p-2 rounded-lg">+</span>
             Tambah Divisi
           </h2>
 
@@ -74,12 +74,12 @@ export default function DivisiPage() {
         </div>
 
         {/* TABLE */}
-        <div className="lg:col-span-2 bg-white rounded-2xl border border-purple-100 shadow-sm p-6 overflow-x-auto">
+        <div className="lg:col-span-2 bg-slate-900 rounded-2xl border border-purple-800 shadow-sm p-6 overflow-x-auto">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg font-semibold text-purple-700">
               Data Divisi
             </h2>
-            <span className="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full">
+            <span className="text-xs bg-purple-300 text-purple-700 px-3 py-1 rounded-full">
               {divisiList.length} Items Total
             </span>
           </div>
@@ -96,7 +96,7 @@ export default function DivisiPage() {
               {divisiList.map((item, index) => (
                 <tr
                   key={item.id}
-                  className="border-b hover:bg-purple-50 transition"
+                  className="border-b hover:bg-purple-400 transition"
                 >
                   <td className="py-3">{index + 1}</td>
                   <td className="py-3 font-medium text-purple-700">
