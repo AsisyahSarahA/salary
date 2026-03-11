@@ -111,7 +111,7 @@ export default function KehadiranPage() {
                   onClick={() => setStatus("HADIR")}
                   className={`py-3 px-4 rounded-lg font-medium transition ${
                     status === "HADIR"
-                      ? "bg-blue-600 text-white"
+                      ? "bg-purple-600 text-white"
                       : "bg-slate-800 text-purple-300 hover:bg-slate-700"
                   }`}
                 >
@@ -121,7 +121,7 @@ export default function KehadiranPage() {
                   onClick={() => setStatus("IZIN")}
                   className={`py-3 px-4 rounded-lg font-medium transition ${
                     status === "IZIN"
-                      ? "bg-blue-600 text-white"
+                      ? "bg-purple-600 text-white"
                       : "bg-slate-800 text-purple-300 hover:bg-slate-700"
                   }`}
                 >
@@ -131,7 +131,7 @@ export default function KehadiranPage() {
                   onClick={() => setStatus("SAKIT")}
                   className={`py-3 px-4 rounded-lg font-medium transition ${
                     status === "SAKIT"
-                      ? "bg-blue-600 text-white"
+                      ? "bg-purple-600 text-white"
                       : "bg-slate-800 text-purple-300 hover:bg-slate-700"
                   }`}
                 >
@@ -156,7 +156,7 @@ export default function KehadiranPage() {
             <button
               onClick={handleSubmit}
               disabled={isLoading}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition disabled:opacity-70 flex items-center justify-center gap-2"
+              className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-lg transition disabled:opacity-70 flex items-center justify-center gap-2"
             >
               {isLoading ? (
                 <>
@@ -178,12 +178,12 @@ export default function KehadiranPage() {
           </div>
 
           {/* Info Box */}
-          <div className="mt-6 p-4 bg-blue-900/20 border border-blue-800 rounded-lg">
+          <div className="mt-6 p-4 bg-purple-900/20 border border-purple-800 rounded-lg">
             <div className="flex gap-3">
-              <span className="text-blue-400 text-xl">ℹ️</span>
+              <span className="text-purple-400 text-xl">ℹ️</span>
               <div>
-                <h4 className="font-semibold text-blue-300 text-sm">Info Penting</h4>
-                <p className="text-xs text-blue-400 mt-1">
+                <h4 className="font-semibold text-purple-300 text-sm">Info Penting</h4>
+                <p className="text-xs text-purple-400 mt-1">
                   Batas waktu presensi masuk adalah pukul 08:30 WIB.<br />
                   Keterlambatan akan dicatat secara otomatis oleh sistem.
                 </p>
@@ -196,7 +196,7 @@ export default function KehadiranPage() {
         <div className="bg-slate-900 rounded-2xl border border-purple-800 p-6">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-lg font-semibold text-purple-700">Riwayat Kehadiran</h2>
-            <button className="text-sm text-blue-400 hover:text-blue-300">Lihat Semua</button>
+            <button className="text-sm text-purple-400 hover:text-purple-300">Lihat Semua</button>
           </div>
 
           <div className="overflow-x-auto">

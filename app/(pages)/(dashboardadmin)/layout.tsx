@@ -18,13 +18,13 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   }, []);
 
   return (
-    <div className="flex min-h-screen bg-slate-950">
+    <div className="flex min-h-screen bg-slate-950 text-white">
       <SidebarAdmin />
 
       <div className="flex-1 flex flex-col">
         <Navbar />
 
-        <main className="flex-1 p-6">
+        <main className="flex-1 p-6 text-purple-200 dark:text-purple-200">
           {children}
         </main>
       </div>
