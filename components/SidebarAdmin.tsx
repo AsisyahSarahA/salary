@@ -136,7 +136,7 @@ export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
                             <span className="text-white font-bold text-xl">S</span>
                         </div>
                         <h1 className="text-xl font-bold">
-                            <span className="text-white">Salary</span>
+                            <span className="text-white">Sar-Salary</span>
                             <span className="text-purple-400">App</span>
                         </h1>
                     </Link>
@@ -246,7 +246,7 @@ export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
                 {/* Footer */}
                 <div className="p-4 border-t border-purple-900/50">
                     <div className="bg-gradient-to-r from-purple-900/50 to-purple-800/30 rounded-lg p-3">
-                        <p className="text-xs text-purple-300 text-center">© 2026 SalaryApp</p>
+                        <p className="text-xs text-purple-300 text-center">© 2026 Sar-SalaryApp</p>
                     </div>
                 </div>
             </aside>

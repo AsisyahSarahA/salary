@@ -140,7 +140,7 @@ export default function SidebarUser({ isOpen = true, onClose }: SidebarUserProps
             </div>
 
             <div>
-              <h1 className="text-lg font-bold text-purple-400">Salary-App</h1>
+              <h1 className="text-lg font-bold text-purple-400">Sar-SalaryApp</h1>
               <p className="text-xs text-purple-300">Payroll System</p>
             </div>
 
@@ -291,7 +291,7 @@ export default function SidebarUser({ isOpen = true, onClose }: SidebarUserProps
           </button>
 
           <p className="text-xs text-purple-400 text-center mt-3">
-            © 2026 NUSAPAY
+            © 2026 Sar-SalaryApp
           </p>
 
         </div>
