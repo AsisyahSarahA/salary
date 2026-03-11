@@ -31,7 +31,7 @@ export default function KehadiranPage() {
     const userData = localStorage.getItem("user");
     if (userData) {
       const user = JSON.parse(userData);
-      if (user.role !== "USER") {
+      if (user.role?.toLowerCase() !== "user") {
         router.push("/dashboard");
       }
     } else {

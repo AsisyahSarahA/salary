@@ -38,9 +38,15 @@ export default function SignIn() {
 
             localStorage.setItem("access_token", data.token);
             localStorage.setItem("user", JSON.stringify(data.user));
-            
 
-            router.push("/dashboard");
+            const role = data.user.role; // ambil role dari API
+
+            if (role === "admin" || role === "hrd") {
+                router.push("/dashboard");
+            } else {
+                router.push("/dashboarduser");
+            }
+
             router.refresh();
         } catch (err: any) {
             setError(err.message);

@@ -36,7 +36,7 @@ interface MenuItem {
     href?: string;  // ✅ optional karena ada yang tidak punya href (submenu)
     hasSubmenu?: boolean;
     submenu?: SubMenuItem[];
-}
+}   
 
 interface SidebarProps {
     isOpen?: boolean;
