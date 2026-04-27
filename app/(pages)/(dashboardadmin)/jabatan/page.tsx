@@ -234,7 +234,7 @@ export default function JabatanPage() {
         </div>
       )}
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
         {/* FORM */}
         <div className="bg-slate-900 rounded-2xl shadow-sm border border-purple-800 p-6">
           <h2 className="text-lg font-semibold text-purple-700 flex items-center gap-2 mb-4">

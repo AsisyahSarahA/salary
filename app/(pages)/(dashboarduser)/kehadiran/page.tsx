@@ -1,68 +1,211 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
 
 interface AttendanceRecord {
   id: number;
   tanggal: string;
-  masuk: string;
-  pulang: string;
+  jam_masuk: string;
+  jam_keluar: string;
   status: "HADIR" | "IZIN" | "SAKIT" | "ALPHA";
   keterangan?: string;
 }
 
+const API_URL = "https://payroll.politekniklp3i-tasikmalaya.ac.id/api/presensi";
+
 export default function KehadiranPage() {
   const router = useRouter();
-  const [currentTime, setCurrentTime] = useState(new Date());
+  const [userName, setUserName] = useState("");
+  const [currentTime, setCurrentTime] = useState<Date | null>(null);
   const [status, setStatus] = useState<"HADIR" | "IZIN" | "SAKIT">("HADIR");
   const [keterangan, setKeterangan] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [attendanceHistory, setAttendanceHistory] = useState<AttendanceRecord[]>([]);
 
-  const [attendanceHistory] = useState<AttendanceRecord[]>([
-    { id: 1, tanggal: "2024-03-01", masuk: "08:00", pulang: "17:00", status: "HADIR" },
-    { id: 2, tanggal: "2024-02-28", masuk: "08:15", pulang: "17:05", status: "HADIR" },
-    { id: 3, tanggal: "2024-02-27", masuk: "-", pulang: "-", status: "IZIN", keterangan: "Urusan Keluarga" },
-    { id: 4, tanggal: "2024-02-26", masuk: "07:55", pulang: "17:00", status: "HADIR" },
-  ]);
-
-  // Cek role USER
-  useEffect(() => {
+  // 🔑 Helper get Auth Data
+  const getAuthData = () => {
+    if (typeof window === "undefined") return { token: null, user: null };
+    const token = localStorage.getItem("access_token");
     const userData = localStorage.getItem("user");
-    if (userData) {
-      const user = JSON.parse(userData);
-      if (user.role?.toLowerCase() !== "user") {
-        router.push("/dashboard");
-      }
-    } else {
-      router.push("/sign-in");
-    }
-  }, [router]);
+    return { 
+      token, 
+      user: userData ? JSON.parse(userData) : null 
+    };
+  };
 
-  // Update waktu setiap detik
+  // ===============================
+  // FETCH DATA KEHADIRAN (FILTER BY USER)
+  // ===============================
+  const fetchAttendance = useCallback(async () => {
+    const { token, user } = getAuthData();
+    if (!token || !user) return;
+
+    try {
+      const res = await fetch(API_URL, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          Accept: "application/json",
+        },
+      });
+
+      const data = await res.json();
+      if (res.ok) {
+        const allData = data.data || data;
+        
+        // 🔍 Tentukan ID Karyawan untuk filter
+        let myId = user.id_karyawan || user.karyawan_id || user.id_user || user.id;
+        
+        // Fallback: Cari by email jika ID di session mungkin ID User
+        try {
+          const resK = await fetch("https://payroll.politekniklp3i-tasikmalaya.ac.id/api/karyawan", {
+            headers: { Authorization: `Bearer ${token}`, Accept: "application/json" }
+          });
+          const listK = await resK.json();
+          const found = (listK.data || listK).find((k: any) => k.email === user.email);
+          if (found) myId = found.id;
+        } catch (e) { /* ignore fallback error */ }
+
+        // Filter data agar hanya milik user ini
+        const filtered = allData.filter((item: any) => 
+          Number(item.id_karyawan) === Number(myId)
+        );
+
+        // Sort by tanggal terbaru
+        filtered.sort((a: any, b: any) => 
+          new Date(b.tanggal).getTime() - new Date(a.tanggal).getTime()
+        );
+
+        setAttendanceHistory(filtered);
+      }
+    } catch (err) {
+      console.error("Gagal mengambil riwayat:", err);
+    }
+  }, []);
+
+  // Cek role & Fetch Data
   useEffect(() => {
+    const { token, user } = getAuthData();
+    
+    if (!token || !user) {
+      router.push("/sign-in");
+      return;
+    }
+
+    setUserName(user.name || "Karyawan");
+
+    // Role Fix: Allow if NOT admin/hrd
+    const role = user.role?.toLowerCase();
+    if (role === "admin" || role === "hrd") {
+      router.push("/dashboard");
+    } else {
+      fetchAttendance();
+    }
+  }, [router, fetchAttendance]);
+
+  // Update waktu setiap detik (Hydration safe)
+  useEffect(() => {
+    setCurrentTime(new Date());
     const timer = setInterval(() => {
       setCurrentTime(new Date());
     }, 1000);
     return () => clearInterval(timer);
   }, []);
 
-  const handleSubmit = async () => {
-    setIsLoading(true);
-    // Simulasi API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    alert(`Presensi ${status} berhasil disimpan!`);
-    setIsLoading(false);
-    setKeterangan("");
+  const getCheckoutTime = (date: Date | null) => {
+    if (!date) return "--:--:--";
+    const checkout = new Date(date.getTime() + 8 * 60 * 60 * 1000);
+    return checkout.getHours().toString().padStart(2, '0') + ':' + 
+           checkout.getMinutes().toString().padStart(2, '0') + ':' + 
+           checkout.getSeconds().toString().padStart(2, '0');
   };
 
-  const formatDate = (date: Date) => {
-    return date.toLocaleDateString("id-ID", {
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
+  const handleSubmit = async () => {
+    const { token, user } = getAuthData();
+    
+    if (!token || !user) {
+      alert("Silakan login terlebih dahulu");
+      return;
+    }
+
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      console.log("Full User Session Object:", user);
+
+      let karyawanIdRaw = user.id_karyawan || user.karyawan_id || user.id_user || user.id;
+      let karyawanId: number | null = karyawanIdRaw ? Number(karyawanIdRaw) : null;
+
+      // 🔍 Cari id_karyawan dari API jika tidak ada di session
+      try {
+        const resKaryawan = await fetch("https://payroll.politekniklp3i-tasikmalaya.ac.id/api/karyawan", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            Accept: "application/json",
+          },
+        });
+        const dataKaryawan = await resKaryawan.json();
+        const listKaryawan = dataKaryawan.data || dataKaryawan;
+        
+        const findMe = listKaryawan.find((k: any) => k.email === user.email);
+        if (findMe) {
+          karyawanId = Number(findMe.id);
+        }
+      } catch (e) {
+        console.error("Gagal mencari data karyawan:", e);
+      }
+
+      if (!karyawanId) {
+        throw new Error("ID Karyawan tidak ditemukan. Silakan hubungi admin.");
+      }
+
+      const now = new Date();
+      const jamMasuk = now.getHours().toString().padStart(2, '0') + ':' + 
+                      now.getMinutes().toString().padStart(2, '0') + ':' + 
+                      now.getSeconds().toString().padStart(2, '0');
+      
+      const jamKeluar = getCheckoutTime(now);
+
+      const payload = {
+        id_karyawan: karyawanId,
+        tanggal: now.toISOString().split('T')[0],
+        status: status,
+        keterangan: keterangan || "-",
+        jam_masuk: jamMasuk,
+        jam_keluar: jamKeluar, 
+      };
+
+      console.log("Sending Presensi Payload:", payload);
+
+      const res = await fetch(API_URL, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+      console.log("Server Response Data:", data);
+
+      if (!res.ok) {
+        throw new Error(data.message || "Gagal menyimpan presensi");
+      }
+
+      alert(`Presensi ${status} berhasil! Estimasi pulang: ${jamKeluar}`);
+      setKeterangan("");
+      fetchAttendance(); 
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : "Terjadi kesalahan";
+      setError(message);
+      alert(message);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const getStatusBadge = (status: string) => {
@@ -81,17 +224,33 @@ export default function KehadiranPage() {
       <div className="flex justify-between items-center">
         <div>
           <h1 className="text-3xl font-bold text-purple-700">Presensi Kehadiran</h1>
-          <p className="text-sm text-purple-500 mt-1">Silahkan melakukan presensi harian Anda.</p>
+          <p className="text-sm text-purple-500 mt-1">Halo {userName}, silahkan melakukan presensi harian Anda.</p>
         </div>
-        <div className="bg-slate-900 rounded-lg px-6 py-3 border border-purple-800">
-          <div className="text-2xl font-bold text-purple-100">
-            {currentTime.toLocaleTimeString("id-ID")}
+        <div className="flex gap-4">
+          <div className="bg-slate-900 rounded-lg px-6 py-3 border border-purple-800">
+            <div className="text-2xl font-bold text-purple-100">
+              {currentTime ? currentTime.toLocaleTimeString("id-ID") : "--:--:--"}
+            </div>
+            <div className="text-xs text-purple-400 uppercase">
+              JAM MASUK (SEKARANG)
+            </div>
           </div>
-          <div className="text-xs text-purple-400 uppercase">
-            {formatDate(currentTime)}
+          <div className="bg-slate-900 rounded-lg px-6 py-3 border border-emerald-800">
+            <div className="text-2xl font-bold text-emerald-400">
+              {getCheckoutTime(currentTime)}
+            </div>
+            <div className="text-xs text-emerald-500 uppercase">
+              ESTIMASI PULANG (+8 JAM)
+            </div>
           </div>
         </div>
       </div>
+
+      {error && (
+        <div className="bg-red-900/30 border border-red-500 text-red-300 p-4 rounded-lg text-sm">
+          ❌ {error}
+        </div>
+      )}
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Form Presensi */}
@@ -107,36 +266,19 @@ export default function KehadiranPage() {
                 Status Kehadiran
               </label>
               <div className="grid grid-cols-3 gap-3">
-                <button
-                  onClick={() => setStatus("HADIR")}
-                  className={`py-3 px-4 rounded-lg font-medium transition ${
-                    status === "HADIR"
-                      ? "bg-purple-600 text-white"
-                      : "bg-slate-800 text-purple-300 hover:bg-slate-700"
-                  }`}
-                >
-                  Hadir
-                </button>
-                <button
-                  onClick={() => setStatus("IZIN")}
-                  className={`py-3 px-4 rounded-lg font-medium transition ${
-                    status === "IZIN"
-                      ? "bg-purple-600 text-white"
-                      : "bg-slate-800 text-purple-300 hover:bg-slate-700"
-                  }`}
-                >
-                  Izin
-                </button>
-                <button
-                  onClick={() => setStatus("SAKIT")}
-                  className={`py-3 px-4 rounded-lg font-medium transition ${
-                    status === "SAKIT"
-                      ? "bg-purple-600 text-white"
-                      : "bg-slate-800 text-purple-300 hover:bg-slate-700"
-                  }`}
-                >
-                  Sakit
-                </button>
+                {(["HADIR", "IZIN", "SAKIT"] as const).map((s) => (
+                  <button
+                    key={s}
+                    onClick={() => setStatus(s)}
+                    className={`py-3 px-4 rounded-lg font-medium transition ${
+                      status === s
+                        ? "bg-purple-600 text-white"
+                        : "bg-slate-800 text-purple-300 hover:bg-slate-700"
+                    }`}
+                  >
+                    {s.charAt(0) + s.slice(1).toLowerCase()}
+                  </button>
+                ))}
               </div>
             </div>
 
@@ -184,8 +326,8 @@ export default function KehadiranPage() {
               <div>
                 <h4 className="font-semibold text-purple-300 text-sm">Info Penting</h4>
                 <p className="text-xs text-purple-400 mt-1">
-                  Batas waktu presensi masuk adalah pukul 08:30 WIB.<br />
-                  Keterlambatan akan dicatat secara otomatis oleh sistem.
+                  Sistem akan mencatat waktu masuk sekarang dan otomatis menghitung 8 jam kerja.<br />
+                  Estimasi waktu pulang Anda adalah pukul <strong className="text-emerald-400">{getCheckoutTime(currentTime)}</strong> WIB.
                 </p>
               </div>
             </div>
@@ -211,25 +353,34 @@ export default function KehadiranPage() {
                 </tr>
               </thead>
               <tbody>
-                {attendanceHistory.map((record) => (
-                  <tr key={record.id} className="border-b border-purple-900/50">
-                    <td className="py-4 text-purple-100 font-medium">
-                      {new Date(record.tanggal).toLocaleDateString("id-ID", {
-                        day: "numeric",
-                        month: "short",
-                        year: "numeric",
-                      })}
+                {attendanceHistory.length > 0 ? (
+                  attendanceHistory.map((record) => (
+                    <tr key={record.id} className="border-b border-purple-900/50">
+                      <td className="py-4 text-purple-100 font-medium">
+                        {new Date(record.tanggal).toLocaleDateString("id-ID", {
+                          day: "numeric",
+                          month: "short",
+                          year: "numeric",
+                        })}
+                      </td>
+                      <td className="py-4 text-purple-300">{record.jam_masuk}</td>
+                      <td className="py-4 text-purple-300">{record.jam_keluar}</td>
+                      <td className="py-4">
+                        <span className={`px-3 py-1 rounded-full text-xs font-bold ${getStatusBadge(record.status)}`}>
+                          {record.status}
+                        </span>
+                      </td>
+                      <td className="py-4 text-purple-400 text-xs">{record.keterangan || "-"}</td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan={5} className="py-12 text-center text-purple-500">
+                      <div className="text-4xl mb-2">📭</div>
+                      <p>Belum ada riwayat kehadiran.</p>
                     </td>
-                    <td className="py-4 text-purple-300">{record.masuk}</td>
-                    <td className="py-4 text-purple-300">{record.pulang}</td>
-                    <td className="py-4">
-                      <span className={`px-3 py-1 rounded-full text-xs font-bold ${getStatusBadge(record.status)}`}>
-                        {record.status}
-                      </span>
-                    </td>
-                    <td className="py-4 text-purple-400 text-xs">{record.keterangan || "-"}</td>
                   </tr>
-                ))}
+                )}
               </tbody>
             </table>
           </div>
@@ -237,4 +388,4 @@ export default function KehadiranPage() {
       </div>
     </div>
   );
-}
+}

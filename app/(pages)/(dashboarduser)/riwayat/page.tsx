@@ -16,22 +16,23 @@ export default function RiwayatCutiPage() {
   const router = useRouter();
   const [filter, setFilter] = useState<"Semua" | "Pending" | "Approved" | "Rejected">("Semua");
 
-  const [cutiHistory] = useState<CutiHistory[]>([
-    { id: 1, jenis: "Tahunan", tanggal: "15 Feb - 17 Feb 2024", durasi: "3 Hari", alasan: "Acara Keluarga", status: "APPROVED" },
-    { id: 2, jenis: "Sakit", tanggal: "10 Jan - 11 Jan 2024", durasi: "1 Hari", alasan: "Flu & Demam", status: "APPROVED" },
-    { id: 3, jenis: "Tahunan", tanggal: "10 Mar - 12 Mar 2024", durasi: "3 Hari", alasan: "Liburan Akhir Pekan", status: "PENDING" },
-  ]);
+  const [cutiHistory] = useState<CutiHistory[]>([]);
 
-  // Cek role USER
+  // Cek role & Auth
   useEffect(() => {
     const userData = localStorage.getItem("user");
-    if (userData) {
-      const user = JSON.parse(userData);
-      if (user.role?.toLowerCase() !== "user") {
-        router.push("/dashboard");
-      }
-    } else {
+    const token = localStorage.getItem("access_token");
+
+    if (!token || !userData) {
       router.push("/sign-in");
+      return;
+    }
+
+    const user = JSON.parse(userData);
+    const role = user.role?.toLowerCase();
+    
+    if (role === "admin" || role === "hrd") {
+      router.push("/dashboard");
     }
   }, [router]);
 

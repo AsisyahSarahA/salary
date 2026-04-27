@@ -26,8 +26,8 @@ const JABATAN_API = "https://payroll.politekniklp3i-tasikmalaya.ac.id/api/jabata
 
 // 🎨 Helper: Format status boolean ke text
 const formatStatus = (aktif: boolean) => aktif ? "AKTIF" : "NONAKTIF";
-const getStatusColor = (aktif: boolean) => aktif 
-  ? "bg-green-100 text-green-600" 
+const getStatusColor = (aktif: boolean) => aktif
+  ? "bg-green-100 text-green-600"
   : "bg-red-100 text-red-600";
 
 export default function KaryawanPage() {
@@ -70,7 +70,7 @@ export default function KaryawanPage() {
 
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || "Gagal mengambil data jabatan");
-      
+
       setJabatanList(data.data || data);
     } catch (err: unknown) {
       if (err instanceof Error) console.error("Fetch Jabatan Error:", err.message);
@@ -98,7 +98,7 @@ export default function KaryawanPage() {
 
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || "Gagal mengambil data karyawan");
-      
+
       setKaryawanList(data.data || data);
     } catch (err: unknown) {
       if (err instanceof Error) setError(err.message);
@@ -134,7 +134,7 @@ export default function KaryawanPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const token = getToken();
-    
+
     if (!token) {
       alert("Silakan login terlebih dahulu");
       return;
@@ -170,7 +170,7 @@ export default function KaryawanPage() {
       if (!res.ok) throw new Error(data.message || `Gagal ${editingId ? "mengupdate" : "menambah"} data`);
 
       setForm({
-        nik: "", nama: "", email: "", tempat_lahir: "", 
+        nik: "", nama: "", email: "", tempat_lahir: "",
         tanggal_lahir: "", alamat: "", id_jabatan: "", status_aktif: "true"
       });
       setEditingId(null);
@@ -201,7 +201,7 @@ export default function KaryawanPage() {
   // 🗑️ DELETE: Hapus data karyawan
   const handleDelete = async (id: number) => {
     if (!confirm("Yakin ingin menghapus data karyawan ini?")) return;
-    
+
     const token = getToken();
     if (!token) {
       alert("Silakan login terlebih dahulu");
@@ -249,7 +249,7 @@ export default function KaryawanPage() {
           ❌ {error}
         </div>
       )}
-      
+
       {loading && !error && (
         <div className="text-center text-purple-600 py-4">
           ⏳ Memproses...
@@ -422,14 +422,14 @@ export default function KaryawanPage() {
               >
                 {loading ? "Menyimpan..." : editingId ? "Update" : "Simpan"}
               </button>
-              
+
               {editingId && (
                 <button
                   type="button"
                   onClick={() => {
                     setEditingId(null);
                     setForm({
-                      nik: "", nama: "", email: "", tempat_lahir: "", 
+                      nik: "", nama: "", email: "", tempat_lahir: "",
                       tanggal_lahir: "", alamat: "", id_jabatan: "", status_aktif: "true"
                     });
                   }}
@@ -464,7 +464,7 @@ export default function KaryawanPage() {
                 <tr className="text-purple-500 border-b border-purple-700">
                   <th className="py-3 text-left">NO</th>
                   <th className="py-3 text-left">NAMA</th>
-                  <th className="py-3 text-left">JABATAN</th>  {/* ✅ Sekarang menampilkan NAMA */}
+                  <th className="py-3 text-left">JABATAN</th> 
                   <th className="py-3 text-left">STATUS</th>
                   <th className="py-3 text-left">AKSI</th>
                 </tr>
@@ -493,14 +493,14 @@ export default function KaryawanPage() {
                       </span>
                     </td>
                     <td className="py-3 space-x-3">
-                      <button 
+                      <button
                         onClick={() => handleEdit(item)}
                         className="text-blue-400 hover:text-blue-300 hover:underline transition"
                         disabled={loading}
                       >
                         Edit
                       </button>
-                      <button 
+                      <button
                         onClick={() => handleDelete(item.id)}
                         className="text-red-400 hover:text-red-300 hover:underline transition"
                         disabled={loading}

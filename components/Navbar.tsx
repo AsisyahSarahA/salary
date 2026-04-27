@@ -9,16 +9,28 @@ import {
   Settings,
   ChevronDown
 } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface NavbarProps {
   onMenuClick?: () => void;
   userName?: string;
 }
 
-export default function Navbar({ onMenuClick, userName = 'Admin' }: NavbarProps) {
+export default function Navbar({ onMenuClick, userName: propUserName }: NavbarProps) {
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
+  const [user, setUser] = useState<any>(null);
+
+  useEffect(() => {
+    const userData = localStorage.getItem("user");
+    if (userData) {
+      setUser(JSON.parse(userData));
+    }
+  }, []);
+
+  const displayName = user?.name || propUserName || 'User';
+  const displayRole = user?.role || 'Karyawan';
+  const displayEmail = user?.email || 'user@salaryapp.com';
 
   return (
     <nav className="h-16 w-full bg-slate-900 border-b border-purple-900/50 flex items-center justify-between px-10 shadow-lg">
@@ -88,8 +100,8 @@ export default function Navbar({ onMenuClick, userName = 'Admin' }: NavbarProps)
               <User className="w-4 h-4 text-white" />
             </div>
             <div className="hidden md:block text-left">
-              <p className="text-sm font-medium text-white">{userName}</p>
-              <p className="text-xs text-purple-400">Administrator</p>
+              <p className="text-sm font-medium text-white">{displayName}</p>
+              <p className="text-xs text-purple-400">{displayRole}</p>
             </div>
             <ChevronDown className="w-4 h-4 text-purple-400 hidden md:block" />
           </button>
@@ -98,8 +110,8 @@ export default function Navbar({ onMenuClick, userName = 'Admin' }: NavbarProps)
           {showProfileMenu && (
             <div className="absolute right-0 mt-2 w-56 bg-slate-800 border border-purple-900/50 rounded-lg shadow-xl z-50 overflow-hidden">
               <div className="p-4 border-b border-purple-900/50">
-                <p className="font-medium text-white">{userName}</p>
-                <p className="text-sm text-purple-400">admin@salaryapp.com</p>
+                <p className="font-medium text-white">{displayName}</p>
+                <p className="text-sm text-purple-400">{displayEmail}</p>
               </div>
               <div className="py-2">
                 <a href="/profile" className="flex items-center gap-2 px-4 py-2 text-sm text-purple-200 hover:bg-purple-900/30 transition-colors">

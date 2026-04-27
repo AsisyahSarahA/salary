@@ -23,55 +23,23 @@ export default function SlipGajiPage() {
   const [selectedSlip, setSelectedSlip] = useState<SlipGaji | null>(null);
   const [showModal, setShowModal] = useState(false);
 
-  const [slipHistory] = useState<SlipGaji[]>([
-    {
-      id: 1,
-      periode: "Maret 2024",
-      bulan: "Maret",
-      tahun: 2024,
-      gajiPokok: 15000000,
-      tunjangan: 500000,
-      potongan: 200000,
-      totalGaji: 15300000,
-      tanggalBayar: "2024-03-25",
-      status: "PAID",
-    },
-    {
-      id: 2,
-      periode: "Februari 2024",
-      bulan: "Februari",
-      tahun: 2024,
-      gajiPokok: 15000000,
-      tunjangan: 0,
-      potongan: 200000,
-      totalGaji: 14800000,
-      tanggalBayar: "2024-02-25",
-      status: "PAID",
-    },
-    {
-      id: 3,
-      periode: "Januari 2024",
-      bulan: "Januari",
-      tahun: 2024,
-      gajiPokok: 15000000,
-      tunjangan: 350000,
-      potongan: 200000,
-      totalGaji: 15150000,
-      tanggalBayar: "2024-01-25",
-      status: "PAID",
-    },
-  ]);
+  const [slipHistory] = useState<SlipGaji[]>([]);
 
-  // Cek role USER
+  // Cek role & Auth
   useEffect(() => {
     const userData = localStorage.getItem("user");
-    if (userData) {
-      const user = JSON.parse(userData);
-      if (user.role?.toLowerCase() !== "user") {
-        router.push("/dashboard");
-      }
-    } else {
+    const token = localStorage.getItem("access_token");
+
+    if (!token || !userData) {
       router.push("/sign-in");
+      return;
+    }
+
+    const user = JSON.parse(userData);
+    const role = user.role?.toLowerCase();
+    
+    if (role === "admin" || role === "hrd") {
+      router.push("/dashboard");
     }
   }, [router]);
 

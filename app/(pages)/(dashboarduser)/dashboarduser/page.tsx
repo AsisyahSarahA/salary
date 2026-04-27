@@ -40,8 +40,9 @@ export default function DashboardUser() {
 
     try {
       const user = JSON.parse(userData);
+      const role = user.role?.toLowerCase();
 
-      if (user.role === "ADMIN") {
+      if (role === "admin" || role === "hrd") {
         router.replace("/dashboard");
         return;
       }
@@ -81,54 +82,50 @@ export default function DashboardUser() {
   const stats = [
     {
       title: "Kehadiran Bulan Ini",
-      value: "22/24",
+      value: "0/0",
       subtitle: "Hari kerja",
       icon: CalendarCheck,
       color: "text-emerald-400",
       bgColor: "bg-emerald-900/20",
-      progress: 92,
-      trend: "up",
-      change: "+3%"
+      progress: 0,
+      trend: "stable",
+      change: "0"
     },
     {
       title: "Sisa Cuti",
-      value: "8 Hari",
-      subtitle: "Dari 12 hari",
+      value: "0 Hari",
+      subtitle: "Jatah tahunan",
       icon: FileText,
       color: "text-blue-400",
       bgColor: "bg-blue-900/20",
-      progress: 67,
+      progress: 0,
       trend: "stable",
-      change: "0%"
+      change: "0"
     },
     {
       title: "Gaji Terakhir",
-      value: "Rp 5.5M",
-      subtitle: "Maret 2024",
+      value: "Rp 0",
+      subtitle: "Belum ada data",
       icon: Wallet,
       color: "text-purple-400",
       bgColor: "bg-purple-900/20",
-      progress: 100,
-      trend: "up",
-      change: "+2%"
+      progress: 0,
+      trend: "stable",
+      change: "0"
     },
     {
       title: "Tugas Pending",
-      value: "3",
-      subtitle: "Perlu perhatian",
+      value: "0",
+      subtitle: "Semua selesai",
       icon: AlertCircle,
       color: "text-amber-400",
       bgColor: "bg-amber-900/20",
-      progress: 25,
-      trend: "down",
-      change: "-1"
+      progress: 0,
+      trend: "stable",
+      change: "0"
     },
   ];
-  const activities = [
-    { id: 1, title: "Presensi hari ini", desc: "Berhasil disimpan", time: "08:00", status: "success" },
-    { id: 2, title: "Pengajuan cuti", desc: "Menunggu approval", time: "2 hari lalu", status: "pending" },
-    { id: 3, title: "Slip gaji Maret", desc: "Telah tersedia", time: "1 minggu lalu", status: "success" },
-  ];
+  const activities: any[] = [];
 
   const quickActions = [
     { title: "Presensi Hari Ini", href: "/kehadiran", icon: Clock, color: "from-emerald-600 to-emerald-700", desc: "Catat kehadiran harian Anda" },
@@ -223,21 +220,25 @@ export default function DashboardUser() {
           </div>
 
           <div className="space-y-4">
-            {activities.map((activity) => (
-              <div
-                key={activity.id}
-                className="flex items-start gap-3 p-3 rounded-lg hover:bg-purple-900/20 transition-colors"
-              >
-                <div className="p-2 bg-purple-900/30 rounded-lg">
-                  {getStatusIcon(activity.status)}
+            {activities.length > 0 ? (
+              activities.map((activity) => (
+                <div
+                  key={activity.id}
+                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-purple-900/20 transition-colors"
+                >
+                  <div className="p-2 bg-purple-900/30 rounded-lg">
+                    {getStatusIcon(activity.status)}
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-sm font-medium text-white">{activity.title}</p>
+                    <p className="text-xs text-purple-400 mt-1">{activity.desc}</p>
+                  </div>
+                  <span className="text-xs text-purple-500 whitespace-nowrap">{activity.time}</span>
                 </div>
-                <div className="flex-1">
-                  <p className="text-sm font-medium text-white">{activity.title}</p>
-                  <p className="text-xs text-purple-400 mt-1">{activity.desc}</p>
-                </div>
-                <span className="text-xs text-purple-500 whitespace-nowrap">{activity.time}</span>
-              </div>
-            ))}
+              ))
+            ) : (
+              <p className="text-sm text-purple-500 text-center py-4">Tidak ada aktivitas terbaru</p>
+            )}
           </div>
         </div>
 

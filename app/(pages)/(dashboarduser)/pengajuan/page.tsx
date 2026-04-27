@@ -13,16 +13,21 @@ export default function PengajuanCutiPage() {
   const [alasan, setAlasan] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  // Cek role USER
+  // Cek role & Auth
   useEffect(() => {
     const userData = localStorage.getItem("user");
-    if (userData) {
-      const user = JSON.parse(userData);
-      if (user.role?.toLowerCase() !== "user") {
-        router.push("/dashboard");
-      }
-    } else {
+    const token = localStorage.getItem("access_token");
+
+    if (!token || !userData) {
       router.push("/sign-in");
+      return;
+    }
+
+    const user = JSON.parse(userData);
+    const role = user.role?.toLowerCase();
+    
+    if (role === "admin" || role === "hrd") {
+      router.push("/dashboard");
     }
   }, [router]);
 
