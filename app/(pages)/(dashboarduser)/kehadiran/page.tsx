@@ -14,6 +14,7 @@ interface AttendanceRecord {
 
 const API_URL = "https://payroll.politekniklp3i-tasikmalaya.ac.id/api/presensi";
 
+
 export default function KehadiranPage() {
   const router = useRouter();
   const [userName, setUserName] = useState("");
@@ -388,4 +389,4 @@ export default function KehadiranPage() {
       </div>
     </div>
   );
-}
+}
